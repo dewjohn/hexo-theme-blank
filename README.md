@@ -93,3 +93,16 @@ mylinks:
     link: https://blog.xxx.com 
     info: xxx
 ```
+
+
+
+# 致谢
+本人代码小白，所以在制作这个主题，参考了下列几位大佬的主题，非常感谢！
+
+1. [hexo](https://hexo.io "hexo")              
+2. [hojun](http://www.hojun.cn "hojun")       
+3. [CaiCai](http://cais.cai-cai.me/ "CaiCai")  
+4. [Next](https://theme-next.org "Next")       
+5. [fexo](https://forsigner.com/ "fexo")        
+6. [royce](https://royce2003.top/ "royce")     
+7. [butterfly](https://jerryc.me/ "butterfly")     
