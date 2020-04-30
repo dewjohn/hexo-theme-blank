@@ -1,0 +1,30 @@
+<% if (page.posts.length > 0) { %>
+  <div id="recent-posts">
+    <% page.posts.each(function (post) { %>
+      <div class="recent-post-item">
+          <div class="title">
+            <a href="<%=url_for(post.path)%>"><%=post.title%></a>
+          </div>
+          <div class="content">
+            <% if(post.excerpt) {%>
+            <%- post.excerpt %>
+            <%}  else{ %>
+            <%- post.content %>
+            <% } %>
+          </div>
+      </div>
+      <div class="post-footer">
+        <a class="date" href="<%=url_for(post.path)%>"><i class="fa fa-calendar" aria-hidden="true"></i> <%- date(post.date, 'YYYY/M/D') %></a>
+        <div class="top">
+          <% if (post.top) { %>
+            <span class="article-meta__separator"> | </span>
+            <i class="fa fa-thumb-tack article-meta__icon sticky"></i>
+            <span class="sticky">置顶</span>
+            <% } %>
+        </div>
+        <div class="readmore"><a href="<%=url_for(post.path)%>">阅读全文 »</a></div>   
+    </div>
+    <% }) %>
+
+  </div>
+<% } %>

@@ -1,0 +1,94 @@
+
+.hljs-comment,
+.hljs-quote {
+  color: #8e908c;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #c82829;
+}
+
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #f5871f;
+}
+
+
+.hljs-attribute {
+  color: #eab700;
+}
+
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #7eace4;
+}
+
+.hljs-title,
+.hljs-section {
+  color: #4271ae;
+}
+
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #8959a8;
+}
+
+
+.highlight {
+  background-color: #f8f8f8;
+
+}
+.hljs {
+  display: block;
+  overflow-x: auto;
+  font: 15px/22px "Microsoft YaHei","Arial",Sans-Serif;
+  background: #f8f8f8;
+  color: #4d4d4c;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.gutter {
+  color: #9e9e9e;
+  padding-top: 30px;
+  font: 15px/22px "Microsoft YaHei","Arial",Sans-Serif;
+}
+.code:before {
+  content:" ";
+  position:absolute;
+  -webkit-border-radius:50%;
+  border-radius:50%;
+  background:#fc625d;
+  width:12px;
+  height:12px;
+  -webkit-box-shadow:20px 0 #fdbc40,40px 0 #35cd4b;
+  box-shadow:20px 0 #fdbc40,40px 0 #35cd4b;
+  z-index:2
+}
+.code {
+  position: relative;
+  padding-top:30px;
+  max-width: 560px;
+}

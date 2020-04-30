@@ -1,0 +1,19 @@
+<% if (theme.mylinks){ %>
+    <div id="links">
+        <div class="links-content">
+            <div class="link-navigation">
+                <% for (let i in theme.mylinks) { %>
+                    <% let mylinks = theme.mylinks[i]; %>
+                    <div class="card">
+                        <img class="ava" src="<%- url_for(mylinks.avatar) %>">
+                        <div class="card-header">
+                        <div><a href="<%- url_for(mylinks.link) %>" target="_blank"> <%= mylinks.name %></a> <a href="<%- url_for(mylinks.link) %>"></a></div>
+                        <div class="info"><%= mylinks.info %></div>
+                        </div>
+                    </div>
+                <% } %>
+                </div>
+<% } %>
+            <%- page.content %>
+        </div>
+
