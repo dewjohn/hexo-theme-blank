@@ -3,9 +3,12 @@
     <% var last_year = ''; %>
     <% page.posts.each(function (post) { %>
         <% var cur_year = post.date.year(); %>
-
         <% if(last_year !== cur_year){ %>
-            <h1><%- cur_year %></h1>
+        <div class="yearzodiac">
+                <div class="years">
+                  <h1><%- cur_year %>  <i class="<%- getAnimalIcon(cur_year) %>"></i></h1>
+                </div>
+        </div>
         <% last_year = cur_year; } %>
         <article class="archive-item">
             <h1><%=page.title%></h1>

@@ -94,6 +94,24 @@ mylinks:
     info: xxx
 ```
 
+# 文章置顶
+
+1.
+```
+npm uninstall hexo-generator-index --save
+```
+```
+npm install hexo-generator-index-pin-top --save
+```
+
+2. 然后在需要置顶的文章的Front-matter中加上top即可：
+```
+title: 
+tags:
+top: true   +加上这个
+date: 2020-04-28 12:01:56
+categories:
+```
 
 
 # 致谢

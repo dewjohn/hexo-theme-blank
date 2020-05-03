@@ -13,6 +13,7 @@ favicon: /img/favicon.ico
 #  category: { path: /category/, fa: fa-folder-open}
 #  about: { path: /about/, fa: fa-heart}
 
+
 # 右上角的menu
 menubutton: 
   tag: /tags/
@@ -30,8 +31,6 @@ motto: Do what you love,love what you do.
 # 是否打开暗黑模式
 todark:
   enable: true   #是否打开暗黑模式
-
-
 
   
 # Valine 评论系统  https://valine.js.org
@@ -98,4 +97,3 @@ mylinks:
     link: 
     info: 
     
-
