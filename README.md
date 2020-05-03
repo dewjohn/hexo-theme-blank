@@ -94,13 +94,15 @@ mylinks:
     info: xxx
 ```
 
+# 写作
+可以在文章希望截取的位置加上 `<!--more-->`  ,这样，首页的文章列表就会显示 `<!--more-->` 上方的内容
+
+
 # 文章置顶
 
-1.
+1. 安装插件
 ```
 npm uninstall hexo-generator-index --save
-```
-```
 npm install hexo-generator-index-pin-top --save
 ```
 
@@ -123,4 +125,12 @@ categories:
 4. [Next](https://theme-next.org "Next")       
 5. [fexo](https://forsigner.com/ "fexo")        
 6. [royce](https://royce2003.top/ "royce")     
-7. [butterfly](https://jerryc.me/ "butterfly")     
+7. [butterfly](https://jerryc.me/ "butterfly")    
+
+
+# 补充
+1. 写作不易，请给我一个免费的Star⭐
+2. 如果觉得主题有什么补充,请协助我改进！
+3. 如果在安装主题过程有什么问题，欢迎提 Issues!
+4. 协助我开发主题:可以Fork一份,改好后，可以向我发起 Pr
+
