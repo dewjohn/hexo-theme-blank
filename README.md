@@ -115,6 +115,37 @@ date: 2020-04-28 12:01:56
 categories:
 ```
 
+# 百度&谷歌分析
+在`_config.yml`，添加获取的代码即可
+```
+#谷歌分析
+google_analytics: xxxxxx
+#百度分析
+baidu_analytics: xxxxxx
+```
+# 百度自动推送
+在`config.yml`,开启即可
+```
+#百度自动推送
+baidu_push:
+  enable: true
+```
+如果您觉得SEO还不够，您可以安装 sitemap 插件
+1. 执行以下代码
+```
+npm install hexo-generator-sitemap --save
+npm install hexo-generator-baidu-sitemap --save
+```
+
+2. 在博客目录的 _config.yml 中添加如下代码
+```
+# 自动生成sitemap
+sitemap:
+path: sitemap.xml
+baidusitemap:
+path: baidusitemap.xml
+```
+
 
 # 致谢
 本人代码小白，所以在制作这个主题，参考了下列几位大佬的主题，非常感谢！
