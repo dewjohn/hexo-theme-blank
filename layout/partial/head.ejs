@@ -40,7 +40,11 @@
   %>
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   
-
+  <%- partial('partial/third-party/google-analytics') %>
+  <%- partial('partial/third-party/baidu-analytics') %>
+  <% if (theme.baidu_push.enable){ %>
+      <%- partial('partial/third-party/baidu-push') %>
+  <% } %>
   <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
     <% theme.stylesheets.forEach(url => { %>
       <link rel="stylesheet" href="<%=url%>">

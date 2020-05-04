@@ -32,20 +32,17 @@ motto: Do what you love,love what you do.
 todark:
   enable: true   #是否打开暗黑模式
 
+
+#百度自动推送
+baidu_push:
+  enable: true
+
+
+#谷歌分析
+google_analytics: 
+#百度分析
+baidu_analytics: 
   
-# Valine 评论系统  https://valine.js.org
-valine:
-  enable: true # 如果使用valine，请设置改之为true
-  appid: # 你的leancloud 的appid
-  appkey: # 你的leancloud 的appkey
-  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
-  verify: false # Verification code
-  placeholder: Just go go # comment box placeholder
-  avatar: mm # gravatar style
-  guest_info: nick,mail,link # custom comment header
-  pageSize: 10 # pagination size
-
-
 
 ## Post copyright
 copyright:
@@ -65,6 +62,20 @@ googlefonts:
   font-family: EB Garamond, Noto Serif SC, Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, MicrMicrosoft YaHei", Helvetica Neue, Helvetica, Arial, serif, sans-serif
   link: https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700&display=swap
 
+
+# Valine 评论系统  https://valine.js.org
+valine:
+  enable: true # 如果使用valine，请设置改之为true
+  appid: # 你的leancloud 的appid
+  appkey: # 你的leancloud 的appkey
+  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
+  verify: false # Verification code
+  placeholder: Just go go # comment box placeholder
+  avatar: mm # gravatar style
+  guest_info: nick,mail,link # custom comment header
+  pageSize: 10 # pagination size
+
+  
 # stylesheets loaded in the <head>
 stylesheets:
 - /css/style.css
