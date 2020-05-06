@@ -33,6 +33,11 @@ todark:
   enable: true   #是否打开暗黑模式
 
 
+# fancybox
+fancybox:
+  enable: true
+
+
 #百度自动推送
 baidu_push:
   enable: true
@@ -81,6 +86,8 @@ stylesheets:
 - /css/style.css
 - /css/partial/highlight.css
 - https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
+- https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css
+
 
 # scripts loaded in the end of the body
 scripts:

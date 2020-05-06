@@ -1,10 +1,14 @@
 
 <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
-  <!-- scripts list from theme config.yml -->
   <% theme.scripts.forEach(url => { %>
     <script src="<%=url%>"></script>
   <% }); %>
 <% } %>
+
+<% if(theme.fancybox.enable) { %>
+  <%- js('/js/warp.js') %>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
+  <% } %>
 <div id="bottom-outer">
     <div id="bottom-inner">
         © 2020 <i class="fa fa-heart" id="heart"></i> <%= config.author %> 

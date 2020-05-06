@@ -3,7 +3,8 @@ a simple hexo theme
 
 # Demo
 
-<a href="https://dmx.pub/">mywebsite</a>
+<a href="https://dmx.pub/">Demosite</a>
+<a href="https://mirror.dmx.pub/">Mirrorsite</a>
 
 # Screenshots
 
@@ -144,6 +145,15 @@ sitemap:
 path: sitemap.xml
 baidusitemap:
 path: baidusitemap.xml
+```
+
+
+# fancybox
+主题 `_config.yml` 处开启
+```
+# fancybox
+fancybox:
+  enable: true
 ```
 
 
