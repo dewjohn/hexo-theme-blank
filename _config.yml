@@ -17,12 +17,13 @@ logo:
 
 # 顶部菜单
 menu:    
-  home: { path: /, fa: fas fa-home}
+  home: { path: /, fa: fab fa-fort-awesome}
   archive: { path: /archives/, fa: far fa-calendar-check}
   tag: { path: /tags/, fa: fas fa-hashtag}
 #  category: { path: /category/, fa: far fa-folder-open}
-  about: { path: /about/, fa: fab fa-github-alt}
+  about: { path: /about/, fa: fab fa-grav}
   guestbook: { path: /guestbook/, fa: fab fa-telegram}
+  friends: { path: /link/, fa: fab fa-weixin}
 
 
 

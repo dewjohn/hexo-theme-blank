@@ -14,11 +14,11 @@
           </div>
       </div>
       <div class="post-footer">
-        <a class="date" href="<%=url_for(post.path)%>"><i class="fa fa-calendar" aria-hidden="true"></i> <%- date(post.date, 'YYYY/M/D') %></a>
+        <a class="date" href="<%=url_for(post.path)%>"><i class="far fa-calendar-alt" aria-hidden="true"></i> <%- date(post.date, 'YYYY/M/D') %></a>
         <div class="top">
           <% if (post.top) { %>
             <span class="article-meta__separator"> | </span>
-            <i class="fa fa-thumb-tack article-meta__icon sticky"></i>
+            <i class="fas fa-thumbtack article-meta__icon sticky"></i>
             <span class="sticky">置顶</span>
             <% } %>
         </div>

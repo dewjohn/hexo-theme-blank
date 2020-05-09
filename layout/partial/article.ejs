@@ -1,11 +1,11 @@
 
 <article id="post">
   <div class="post-date">
-        <span title="发表于 <%- date(post.date, theme.date_format) %>"><i class="fa fa-calendar" aria-hidden="true"></i> <%- date(post.date, theme.date_format) %></span>  |  
-        <span title="更新于 <%- date(post.updated, theme.date_format) %>"><i class="fa fa-history" aria-hidden="true"></i> <%- date(post.updated, 'YYYY-MM-DD') %></span>
+        <span title="发表于 <%- date(post.date, theme.date_format) %>"><i class="far fa-calendar-alt" aria-hidden="true"></i> <%- date(post.date, theme.date_format) %></span>  |  
+        <span title="更新于 <%- date(post.updated, theme.date_format) %>"><i class="fas fa-history" aria-hidden="true"></i> <%- date(post.updated, 'YYYY-MM-DD') %></span>
         <% if (post.top) { %>
         <span class="article-meta__separator"> | </span>
-        <i class="fa fa-thumb-tack article-meta__icon sticky"></i>
+        <i class="fas fa-thumbtack article-meta__icon sticky"></i>
         <span class="sticky">置顶</span>
         <% } %>
   </div>
@@ -30,7 +30,7 @@
     <div class="tags-back">
       <div class="tags">
         <% post.tags.each(function(tag){%>
-          <i class="fa fa-tags" aria-hidden="true"></i><a href="<%- url_for(tag.path) %>" class="tag"><%= tag.name %></a>
+          <i class="fas fa-tags" aria-hidden="true"></i> <a href="<%- url_for(tag.path) %>" class="tag"><%= tag.name %></a>
         <% }) %>
       </div>
       <div class="back">
