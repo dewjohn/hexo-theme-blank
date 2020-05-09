@@ -22,25 +22,8 @@
     }
 }
 
-.navbar{
-    text-align: center;
-    font-size: 20px;
-
-	.menulist {
-		list-style-type:none;
-		padding-left: 0;
-        text-align: center;
-		.li {
-			display:inline-block;
-			margin: 5px;
-		}
-	}
-
-     .menu-item {
-      display: inline-block;
-	  padding-right: 10px;
-    }
-
+.motto {
+	text-align: center;
 }
 
 
@@ -201,4 +184,137 @@
     	border-color: #42b983;
         color: #42b983;
         text-decoration: none;
+}
+
+
+.nav {
+	width: 100%;
+	height: 80px;
+	box-shadow: 0 3px 3px 0 #CCC;
+	background: #FFF;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	overflow: hidden;
+	transition: 0.3s
+}
+.nav.index {
+	background: rgba(255, 255, 255 ,0.8);
+	box-shadow: 0 0 0 0 rgba(0,0,0,0.05);
+}
+.nav.scroll {
+	background: #FFF;
+	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.05);
+	transition: 0.3s
+}
+.nav .layui-container {
+	position: relative;
+	transition: all 400ms ease-out;
+}
+.nav .nav-logo {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 15px;
+	line-height: 70px;
+}
+.nav .nav-list {
+	display: inline-block;
+	height: 80px;
+}
+.nav .nav-list button {
+	width: 25px;
+	height: 30px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.fa-home{
+	color: #ff6b6b;
+}
+.fa-calendar-check{
+	color: #0abde3;
+}
+.fa-hashtag{
+	color: #feca57;
+}
+.fa-folder-open{
+	color: #1dd1a1;
+}
+.fa-github-alt{
+	color: #9a6af7;
+}
+.fa-telegram{
+	color: #0095ff;
+}
+
+.nav .nav-list button span {
+	display: block;
+	width: 25px;
+	height: 2px;
+	background: #000000;
+	margin-bottom: 6px;
+	transition: 0.5s;
+}
+.nav .nav-list button span.spa1 {
+	transform: rotate(45deg);
+}
+.nav .nav-list button span.spa3 {
+	transform: rotate(-45deg) translate(5px, -5px);
+}
+.nav .layui-nav {
+	width: 100%;
+	position: absolute;
+	top: 80px;
+	right: 0;
+	color: #000;
+	background: transparent;
+}
+.nav .layui-nav .layui-nav-item {
+	display: inline-block;
+	margin: 0;
+	padding: 1em;
+}
+.nav .layui-nav * {
+	font-size: 18px;
+}
+.nav .layui-nav .layui-nav-item a {
+	padding: 0 0;
+	color: #000;
+}
+.nav .layui-nav-bar, .nav .layui-nav .layui-this:after {
+	height: 2px;
+	background-color: #517ACD;
+}
+.nav .layui-nav .layui-this a, .nav .layui-nav .layui-nav-item a:hover {
+	color: #517ACD;
+}
+
+@media screen and (min-width: 768px) {
+.nav {
+	max-height: 60px;
+}
+.nav.index {
+	background: rgba(255, 255, 255 ,0.3);
+}
+.nav .nav-list button {
+	display: none;
+}
+.nav .layui-nav {
+	width: auto;
+	position: absolute;
+	top: 0;
+	padding: 0 5px;
+	border-radius: 0;
+	margin: 0;
+}
+.nav .layui-nav .layui-nav-item {
+	display: inline-block;
+	margin: 0 0rem;
+}
 }

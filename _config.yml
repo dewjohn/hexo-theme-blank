@@ -5,24 +5,26 @@ language: zh-CN
 # 设置 favicon
 favicon: /img/favicon.ico
 
-# 名字logo下方
-#menu:    
-#  home: { path: /, fa: fa-home}
-#  archive: { path: /archives/, fa: fa-archive}
-#  tag: { path: /tags/, fa: fa-tags}
-#  category: { path: /category/, fa: fa-folder-open}
-#  about: { path: /about/, fa: fa-heart}
+
+# 左上角logo
+logo:
+  enable: true
+  url: https://github.com/a2396837     # 点击图标跳转链接
+  icon: fab fa-github                  # fontawesome V5 图标
+  title: 一时开源一时爽，一直开源一直爽   # 鼠标移到图标显示的文字
 
 
-# 右上角的menu
-menubutton: 
-  tag: /tags/
-  archive: /archives/
-#  分类: /category/
-  about: /about/
-#  donate: /donate/ 
-  guestbook: /guestbook/
-  friends: /link/
+
+# 顶部菜单
+menu:    
+  home: { path: /, fa: fas fa-home}
+  archive: { path: /archives/, fa: far fa-calendar-check}
+  tag: { path: /tags/, fa: fas fa-hashtag}
+#  category: { path: /category/, fa: far fa-folder-open}
+  about: { path: /about/, fa: fab fa-github-alt}
+  guestbook: { path: /guestbook/, fa: fab fa-telegram}
+
+
 
 # 座右铭
 motto: Do what you love,love what you do.
@@ -37,7 +39,6 @@ todark:
 fancybox:
   enable: true
 
-
 #百度自动推送
 baidu_push:
   enable: true
@@ -47,7 +48,7 @@ baidu_push:
 google_analytics: 
 #百度分析
 baidu_analytics: 
-  
+
 
 ## Post copyright
 copyright:
@@ -56,7 +57,7 @@ copyright:
 
 # 备案:
 ICP:
-  enable: false
+  enable: true
   link: 
   text: 
 #  icon: /img/icp.png
@@ -71,8 +72,8 @@ googlefonts:
 # Valine 评论系统  https://valine.js.org
 valine:
   enable: true # 如果使用valine，请设置改之为true
-  appid: # 你的leancloud 的appid
-  appkey: # 你的leancloud 的appkey
+  appid: 
+  appkey: 
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
@@ -85,7 +86,8 @@ valine:
 stylesheets:
 - /css/style.css
 - /css/partial/highlight.css
-- https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
+- https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
+#- https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
 - https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css
 
 
@@ -94,7 +96,6 @@ scripts:
 - /js/header.js
 - /js/script.js
 - https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
-
 
 
 
@@ -114,4 +115,8 @@ mylinks:
     avatar: 
     link: 
     info: 
+
+
+
+
     

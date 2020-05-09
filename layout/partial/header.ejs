@@ -1,16 +1,5 @@
 
-<div class="menubutton">
-    <div class="title animated fadeInDown">
-    <div class="dropdown">
-        <button class="dropbtn">M e n u</button>
-           <div class="dropdown-content"> 
-            <% for (name in theme.menubutton) { %>
-            <a href="<%- url_for(theme.menubutton[name]) %>"><%- __(name) %></a>
-            <% } %>
-          </div>
-        </div>
-    </div>
-</div>
+
 
 <header class="header">
     <div class="title animated fadeInDown">
@@ -22,18 +11,7 @@
         <div class="motto">
             <h2><%= theme.motto %></h2>
         </div>
-        <nav class="navbar">
-            <ul class="menulist">
-                <% for (var name in theme.menu){ %>
-                <li class="li">
-                    <a href="<%- url_for(theme.menu[name].path) %>">
-                        <i class="fa <%= theme.menu[name].fa %>" aria-hidden="true"></i>
-                        <%- __(name) %>
-                    </a>
-                </li>
-                <% } %>
-            </ul>
-        </nav>
+
 </header>
 
 

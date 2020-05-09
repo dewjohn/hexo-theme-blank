@@ -4,20 +4,25 @@ a simple hexo theme
 # Demo
 
 <a href="https://dmx.pub/">Demosite</a>
+
 <a href="https://mirror.dmx.pub/">Mirrorsite</a>
+
 
 # Screenshots
 
-![](https://raw.githubusercontent.com/a2396837/hexo-theme-blank/master/Screenshots/screenshot.jpg)
+<img src="https://cdn.jsdelivr.net/gh/a2396837/hexophoto/img/screenshot.png" width="50%" height="50%">
+
 
 
 # How to use
 
 ## 安装
-1. ``
+1. 在hexo根目录
+``
 git clone https://github.com/a2396837/hexo-theme-blank.git themes/blank
 ``
 2. 修改站点配置文件``_config.yml``，把主题改为``blank``
+
 
 ## 标签页
 

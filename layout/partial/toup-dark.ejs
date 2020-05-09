@@ -16,14 +16,6 @@ function topFunction() {
 }
 </script>
 
-<% if (theme.todark.enable){ %>
-    <div id="dark" onclick="switchDarkMode()"></div> 
-    <script>
-      if(localStorage.getItem('dark') === '1') {
-          document.body.classList.add('dark');
-      }
-      document.getElementById('dark').innerHTML = document.querySelector("body").classList.contains("dark")?"🌙":"🌞";
-    </script>
-<% } %>
+
 
 

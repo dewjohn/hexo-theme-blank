@@ -90,3 +90,8 @@
   max-width: 550px;
 }
 
+ code {
+  background-color: #f2f2f2;
+  padding: 3px;
+}
+
