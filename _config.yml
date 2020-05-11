@@ -6,6 +6,10 @@ language: zh-CN
 favicon: /img/favicon.ico
 
 
+# 设置 rss
+rss: /atom.xml
+
+
 # 左上角logo
 logo:
   enable: true
