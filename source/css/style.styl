@@ -379,65 +379,35 @@ hr {
 
 
 @font-face {
-  font-family: 'fontello';
-  src: url("../fonts/fontello.eot?58336539");
-  src: url("../fonts/fontello.eot?58336539#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?58336539") format("woff2"), url("../fonts/fontello.woff?58336539") format("woff"), url("../fonts/fontello.ttf?58336539") format("truetype"), url("../fonts/fontello.svg?58336539#fontello") format("svg");
+  font-family: 'chinese-zodiac';
+  font-display: swap;
+  src: url('../fonts/chinese-zodiac.eot');
+  src: url('../fonts/chinese-zodiac.eot') format('embedded-opentype'),
+       url('../fonts/chinese-zodiac.woff2') format('woff2'),
+       url('../fonts/chinese-zodiac.woff') format('woff');
   font-weight: normal;
-  font-style: normal
-}
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "fontello";
   font-style: normal;
-  font-weight: normal;
-  speak: none;
+}
+.symbolic-animals {
   display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1em;
-  margin-left: .2em;
+  font: normal normal normal 14px/1 chinese-zodiac;
+  font-size: 50px;
+  text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
+  -moz-osx-font-smoothing: grayscale;
 }
-.icon-long:before {
-  content: '\e806'
-}
-.icon-hu:before {
-  content: '\e809'
-}
-.icon-zhu:before {
-  content: '\e810'
-}
-.icon-ma:before {
-  content: '\e813'
-}
-.icon-shu:before {
-  content: '\e816'
-}
-.icon-yang:before {
-  content: '\e818'
-}
-.icon-she:before {
-  content: '\e820'
-}
-.icon-niu:before {
-  content: '\e822'
-}
-.icon-gou:before {
-  content: '\e825'
-}
-.icon-tu:before {
-  content: '\e826'
-}
-.icon-hou:before {
-  content: '\e829'
-}
-.icon-ji:before {
-  content: '\e82f'
-}
+.icon-dragon:before { content: '\e806'; }
+.icon-tiger:before { content: '\e809'; }
+.icon-pig:before { content: '\e810'; }
+.icon-horse:before { content: '\e813'; }
+.icon-rat:before { content: '\e816'; }
+.icon-goat:before { content: '\e818'; }
+.icon-snake:before { content: '\e820'; }
+.icon-ox:before { content: '\e822'; }
+.icon-dog:before { content: '\e825'; }
+.icon-rabbit:before { content: '\e826'; }
+.icon-monkey:before { content: '\e829'; }
+.icon-rooster:before { content: '\e82f'; }
 
 
 @import "partial/fonts";

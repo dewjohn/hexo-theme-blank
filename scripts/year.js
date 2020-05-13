@@ -1,18 +1,18 @@
 hexo.extend.helper.register('getAnimalIcon', function (year) {
     var index = parseInt(year) % 12;
     var icon = {
-        0: 'icon-hou',
-        1: 'icon-ji',
-        2: 'icon-gou',
-        3: 'icon-zhu',
-        4: 'icon-shu',
-        5: 'icon-niu',
-        6: 'icon-hu',
-        7: 'icon-tu',
-        8: 'icon-long',
-        9: 'icon-she',
-        10: 'icon-ma',
-        11: 'icon-yang',
+        0: 'symbolic-animals icon-monkey',
+        1: 'symbolic-animals icon-rooster',
+        2: 'symbolic-animals icon-dog',
+        3: 'symbolic-animals icon-pig',
+        4: 'symbolic-animals icon-rat',
+        5: 'symbolic-animals icon-ox',
+        6: 'symbolic-animals icon-tiger',
+        7: 'symbolic-animals icon-rabbit',
+        8: 'symbolic-animals icon-dragon',
+        9: 'symbolic-animals icon-snake',
+        10: 'symbolic-animals icon-horse',
+        11: 'symbolic-animals icon-goat',
     }
     return icon[index]
 });
