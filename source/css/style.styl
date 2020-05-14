@@ -108,7 +108,7 @@ a:hover, a:active {
 }
 
 .post-wrap .archive-item {
-  margin-left: 2rem;
+  overflow: hidden;
 }
 .archive-item-link {
   display: inline-block;
@@ -276,6 +276,9 @@ hr {
 		color: #ccc7c7;
 	
 	}
+	code {
+		background-color: #3b4250;
+	}
 
 }
 
@@ -308,17 +311,12 @@ hr {
 }
 .card {
 	width: 45%;
-	font-size: 1.25rem;
-	padding: 20px 20px;
+	font-size: 1.5rem;
+	padding: 20px 10px;
 	border-radius: 4px;
 	transition-duration: 0.15s;
 	margin-bottom: 1rem;
 	display:flex;
-}
-@media(max-width: 1400px){
-	.card{
-		width: 40% !important;
-	}
 }
 .card:nth-child(odd) {
 	float: left;
@@ -329,13 +327,15 @@ hr {
 .card:hover {
 	transform: scale(1.1);
 	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+    background-image: linear-gradient(90deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
+
 }
 .card a {
 	border:none; 
 }
 .card .ava {
-	width: 3rem!important;
-	height: 3rem!important;
+	width: 4rem!important;
+	height: 4rem!important;
 	margin:0!important;
 	margin-right: 1em!important;
 	border-radius:50%;
@@ -366,15 +366,8 @@ hr {
 	font-size:14px;
 	min-width: 0;
 	overflow: hidden;
+    text-overflow: ellipsis;
 	white-space: nowrap;
-}
-.card:hover{
-	color: rgb(255, 255, 255) !important;
-	border-radius: 3px;
-	font-size: 15px;
-	box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
-	background-image: linear-gradient(90deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
-	margin: inherit;
 }
 
 
@@ -391,7 +384,8 @@ hr {
 .symbolic-animals {
   display: inline-block;
   font: normal normal normal 14px/1 chinese-zodiac;
-  font-size: 50px;
+  font-size: larger;
+  float: right;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -410,10 +404,10 @@ hr {
 .icon-rooster:before { content: '\e82f'; }
 
 
+
 @import "partial/fonts";
 @import "partial/header";
 @import "partial/recent-posts";
 @import "partial/post";
 @import "partial/media";
-
 

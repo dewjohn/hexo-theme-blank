@@ -1,4 +1,5 @@
 
+
 <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
   <% theme.scripts.forEach(url => { %>
     <script src="<%=url%>"></script>
@@ -17,7 +18,9 @@
         <a href="http://hexo.io">hexo</a> | Theme is <a href="https://github.com/a2396837/hexo-theme-blank/"><%=config.theme%></a>
         <% if (theme.ICP.enable){ %>
           <div class="icp-info">
+            <% if(theme.ICP.icon){ %>
             <img  class="icp-icon" src="<%=theme.ICP.icon %>">
+            <% } %>
           <a href="<%=theme.ICP.link%>" target="_blank"> <%=theme.ICP.text%></a>
         </div>
         <% } %>
