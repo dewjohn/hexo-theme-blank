@@ -1,21 +1,18 @@
 // note
-.note 
-    position: relative;
-    margin: 0 0 1rem;
-    padding: 15px;
-    border: initial;
-    border-left: 5px solid #eee;
-    background-color: #f9f9f9;
-    border-radius: 3px;
-    padding-left: 45px;
+.note
+  position: relative;
+  padding 0.75rem
+  border-left 0.35rem solid
+  border-radius 0.25rem
+  margin 1.5rem 0
+  padding-left: 45px
 
-
-  *:last-child
-    margin: 0 0 .1rem;
+.post-wrap.page .note::before
+  top:34px !important;
 
 .note::before {
     position: absolute;
-    top: 23px;
+    top: 25px;
     left: 15px;
     font-size: larger;
     font-weight: 600;
