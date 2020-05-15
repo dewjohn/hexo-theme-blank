@@ -1,0 +1,81 @@
+// note
+.note 
+    position: relative;
+    margin: 0 0 1rem;
+    padding: 15px;
+    border: initial;
+    border-left: 5px solid #eee;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    padding-left: 45px;
+
+
+  *:last-child
+    margin: 0 0 .1rem;
+
+.note::before {
+    position: absolute;
+    top: 23px;
+    left: 15px;
+    font-size: larger;
+    font-weight: 600;
+    font-family: "Font Awesome 5 Free";
+}
+
+.note-primary
+  background-color #f5f0fa
+  border-color #6f42c1
+
+.note.note-primary::before
+  content: "\f055";
+  color: #6f42c1;
+
+.note-default
+  background-color #e2e3e5
+  border-color #58595a
+
+.note.note-default::before
+  content: "\f0a9";
+  color: #777777;
+
+.note-success
+  background-color #e2f0e5
+  border-color #49a75f
+
+.note.note-success::before 
+  content: "\f058";
+  color: #5cb85c;
+
+.note-danger
+  background-color #fae7e8
+  border-color #e45460
+
+.note.note-danger::before
+  content: "\f056";
+  color: #d9534f;
+
+.note-warning
+  background-color #faf4e0
+  border-color #f0ad4e
+
+.note.note-warning::before
+  content: '\f06a';
+  color: #f0ad4e;
+
+.note-info
+  background-color #e4f2f5
+  border-color #428bca
+
+.note.note-info::before
+  content: "\f056";
+  color: #428bca;
+
+.note-light
+  background-color #fefefe
+  border-color #0f0f0f
+  box-shadow: 1px 1px 2px #888888
+
+.note.note-light::before
+  content: "\f044";
+  color: #0f0f0f;
+
