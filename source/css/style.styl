@@ -4,26 +4,35 @@ body{
 	font-family: $bodyfont;
 }
 
+h1,h2,h3::before {
+    font-size: larger;
+    font-weight: 600;
+    font-family: "Font Awesome 5 Free";
+}
+
 .content h1::before {
-	content: "# ";
-	color: #2d67bd91;
+	content: "\f14e";
+	color: #00adff;
 	font-size: 25px;
+    margin-right: 0.5em;
 }
 h1 {
 	font-size: 30px;
 }
 .content h2::before {
-	content: "## ";
-	color: #2d67bd91;
+	content: "\f14e";
+	color: #03A9F4;
 	font-size: 20px;
+    margin-right: 0.5em;
 }
 h2 {
 	font-size: 25px;
 }
 .content h3::before {
-	content: "### ";
-	color: #2d67bd91;
+	content: "\f14e";
+	color: #00bcd4;
 	font-size: 15px;
+    margin-right: 0.5em;
 }
 h3 {
 	font-size: 20px;
@@ -93,6 +102,9 @@ a:hover, a:active {
   max-width: 650px;
   margin: 0 auto;
   font-size: 16px;
+}
+.archive-item{
+	font-size: 20px;
 }
 .container .post-titlebox {
 	text-align: center;

@@ -27,6 +27,7 @@ git clone https://github.com/a2396837/hexo-theme-blank.git themes/blank
 ## hexo-theme-blank文档
 
 地址: [clink here!](https://dmx.pub/posts/a832e6e1.html)
+<br>
 备份地址: [clink here!](https://mirror.dmx.pub/posts/a832e6e1.html)
 
 
