@@ -42,6 +42,8 @@ function mcancelclosetime()
 // close layer when click-out
 document.onclick = mclose; 
 
+
+
 layui.use(['jquery', 'element', 'carousel'], function(){
     var $ = layui.jquery
     ,element = layui.element
@@ -51,6 +53,7 @@ layui.use(['jquery', 'element', 'carousel'], function(){
     $(window).scroll(function() {
       var scr=$(document).scrollTop();
       scr > 0 ? $(".nav").addClass('scroll') : $(".nav").removeClass('scroll');
+      scr > 0 ? $(".nav").css('display','block') : $(".nav").css('display','none');
     });
   
   

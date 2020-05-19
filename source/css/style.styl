@@ -4,38 +4,42 @@ body{
 	font-family: $bodyfont;
 }
 
-h1,h2,h3::before {
-    font-size: larger;
-    font-weight: 600;
-    font-family: "Font Awesome 5 Free";
+
+h1::before, h2::before, h3::before {
+font-size: larger;
+font-weight: 600;
+font-family: "Font Awesome 5 Free";
 }
 
-.content h1::before {
-	content: "\f14e";
-	color: #00adff;
-	font-size: 25px;
+
+.content h1:hover::before {
+	content: "\f0c1";
+	font-size: 1em;
+    margin-right: 0.25em;
+}
+.content h1 {
+    padding-bottom: .3em;
+    font-size: 2em;
+    border-bottom: 1px solid #eaecef;
+}
+.content h2:hover::before {
+	content: "\f0c1";
+	font-size: 0.9em;
     margin-right: 0.5em;
 }
-h1 {
-	font-size: 30px;
+.content h2 {
+    padding-bottom: .3em;
+    font-size: 1.5em;
+    border-bottom: 1px solid #eaecef;
 }
-.content h2::before {
-	content: "\f14e";
-	color: #03A9F4;
-	font-size: 20px;
+.content h3:hover::before {
+	content: "\f0c1";
+	font-size: 0.75em;
     margin-right: 0.5em;
 }
-h2 {
-	font-size: 25px;
-}
-.content h3::before {
-	content: "\f14e";
-	color: #00bcd4;
-	font-size: 15px;
-    margin-right: 0.5em;
-}
-h3 {
-	font-size: 20px;
+.content h3 {
+	font-size: 1.25em;
+	border-bottom: 1px solid #eaecef;
 }
 
 
@@ -269,15 +273,6 @@ hr {
 		color #a09c9c;
 
 	}
-	.code {
-		background-color #282c34;
-		color #a09c9c;
-	}
-	.hljs{
-		background-color #282c34;
-		color #a09c9c;	
-
-	}
 	.post-copyright {
 		background-color: #282c34;
 	}
@@ -290,6 +285,9 @@ hr {
 	}
 	code {
 		background-color: #3b4250;
+	}
+	.note {
+		filter: brightness(50%)
 	}
 
 }
@@ -425,4 +423,41 @@ hr {
 @import "partial/media";
 @import "partial/tag_plugin/tags";
 @import "partial/tag_plugin/note";
+
+
+code {
+	background-color: #f8f8f8;
+    font-family: Consolas,"Panic Sans","DejaVu Sans Mono","Bitstream Vera Sans Mono",Menlo,"Microsoft Yahei"!important;
+}
+.gutter {
+	padding-right: 0.5em;
+	font-family: Consolas,"Panic Sans","DejaVu Sans Mono","Bitstream Vera Sans Mono",Menlo,"Microsoft Yahei"!important;
+}
+
+
+
+/* for block of numbers */
+.hljs-ln-numbers {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    text-align: center;
+    color: #ccc;
+    vertical-align: top;
+    padding-right: 5px;
+
+    /* your custom style here */
+}
+
+/* for block of code */
+.hljs-ln-code {
+    padding-left: 10px;
+}
+.hljs-ln-numbers {
+	padding-right: 0.5em !important;
+}
 

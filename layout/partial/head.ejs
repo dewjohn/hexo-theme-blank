@@ -55,5 +55,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
     <link rel="stylesheet" href="<%=theme.googlefonts.link%>"  media="print" onload="this.media='all'">
   <% } %>
+
+  <% if(theme.highlight.enable) { %>
+    <link rel="stylesheet" href="<%= theme.highlight.style %>">
+    <% } %>
+
 </head>
 </html>
