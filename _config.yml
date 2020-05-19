@@ -6,6 +6,10 @@ language: zh-CN
 favicon: /img/favicon.ico
 
 
+# 设置 rss
+rss: /atom.xml
+
+
 # 左上角logo
 logo:
   enable: true
@@ -105,7 +109,6 @@ stylesheets:
 
 # scripts loaded in the end of the body
 scripts:
-- /js/header.js
 - /js/script.js
 - https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
 - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js
@@ -116,16 +119,17 @@ scripts:
 mylinks:
   - name: DmxZ
     avatar: https://dmx.pub/img/avatar.png
+    link: https://dmxz.me
+    info: 欢迎来到 DmxZ 的自留地！
+    
+  - name: DmxZ
+    avatar: https://dmx.pub/img/avatar.png
     link: https://dmx.pub
     info: 欢迎来到 DmxZ 的自留地！
     
-  - name: 
-    avatar: 
-    link: 
-    info: 
+  - name: DmxZ
+    avatar: https://dmx.pub/img/avatar.png
+    link: https://dmx.best
+    info: 欢迎来到 DmxZ 的自留地！
     
-  - name: 
-    avatar: 
-    link: 
-    info: 
-    
+

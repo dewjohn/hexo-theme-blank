@@ -1,5 +1,6 @@
 
 <article id="post">
+  <div class="post-title"><h1><%= post.title || '(no title)' %></h1></div>
   <div class="post-date">
         <span title="发表于 <%- date(post.date, theme.date_format) %>"><i class="far fa-calendar-alt" aria-hidden="true"></i> <%- date(post.date, theme.date_format) %></span>  |  
         <span title="更新于 <%- date(post.updated, theme.date_format) %>"><i class="fas fa-history" aria-hidden="true"></i> <%- date(post.updated, 'YYYY-MM-DD') %></span>
@@ -9,7 +10,7 @@
         <span class="sticky">置顶</span>
         <% } %>
   </div>
-  <div class="post-title"><h1><%= post.title || '(no title)' %></h1></div>
+  <br>
   <div class="content">
       <div><%-page.content%></div>
 

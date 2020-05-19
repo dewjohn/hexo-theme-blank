@@ -1,24 +1,4 @@
 
-
-<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
-  <% theme.scripts.forEach(url => { %>
-    <script src="<%=url%>"></script>
-  <% }); %>
-<% } %>
-
-<% if(theme.fancybox.enable) { %>
-  <%- js('/js/warp.js') %>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
-  <% } %>
-
-  <script>
-    $(document).ready(function() {
-        $('code.hljs').each(function(i, block) {
-            hljs.lineNumbersBlock(block);
-        });
-    });
-  </script>
-  
 <div id="bottom-outer">
     <div id="bottom-inner">
         © 2020 <i class="fa fa-heart" id="heart"></i> <%= config.author %> 
@@ -33,6 +13,8 @@
           <a href="<%=theme.ICP.link%>" target="_blank"> <%=theme.ICP.text%></a>
         </div>
         <% } %>
-    </div>
+    </div>  
   </div>
+  
+<%- partial('partial/script') %>
 
