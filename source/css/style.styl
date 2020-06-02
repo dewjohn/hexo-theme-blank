@@ -1,9 +1,9 @@
+
 $bodyfont = convert(hexo-config('googlefonts.font-family'))
 
 body{
 	font-family: $bodyfont;
 }
-
 
 h1::before, h2::before, h3::before {
 font-size: larger;
@@ -11,14 +11,12 @@ font-weight: 600;
 font-family: "Font Awesome 5 Free";
 }
 
-
 .content h1:hover::before {
 	content: "\f0c1";
 	font-size: 1em;
     margin-right: 0.25em;
 }
 .content h1 {
-    padding-bottom: .3em;
     font-size: 2em;
     border-bottom: 1px solid #eaecef;
 }
@@ -28,9 +26,7 @@ font-family: "Font Awesome 5 Free";
     margin-right: 0.5em;
 }
 .content h2 {
-    padding-bottom: .3em;
     font-size: 1.5em;
-    border-bottom: 1px solid #eaecef;
 }
 .content h3:hover::before {
 	content: "\f0c1";
@@ -39,7 +35,6 @@ font-family: "Font Awesome 5 Free";
 }
 .content h3 {
 	font-size: 1.25em;
-	border-bottom: 1px solid #eaecef;
 }
 
 
@@ -62,13 +57,11 @@ font-family: "Font Awesome 5 Free";
 	background-color: #AED6F1;
 }
 
-
 body {
-	font-size: 15px;
+	font-size: 16px;
 	width: 100%;
 	margin: 0 auto 30px auto;
 	background-color: #fff;
-
 }
 p {
 	line-height: 1.9em;
@@ -87,14 +80,11 @@ a:link, a:visited {
 	-ms-transition: all .15s linear;
 	transition: all .15s linear;
 	color: #424242;
-
 }
 
 a:hover, a:active {
 	color: #517ACD;
-
 }
-
 
 .pagetitle {
 	text-align: center;
@@ -107,7 +97,7 @@ a:hover, a:active {
   margin: 0 auto;
   font-size: 16px;
 }
-.archive-item{
+.archive-item {
 	font-size: 20px;
 }
 .container .post-titlebox {
@@ -122,15 +112,12 @@ a:hover, a:active {
 	border-radius: 15px;
     background: #f6f6f6;
 }
-
-.post-wrap .archive-item {
-  overflow: hidden;
-}
 .archive-item-link {
   display: inline-block;
-  text-decoration: none;
+  width:550px;
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .archive-item-link:hover {
   color: #2d96bd;
@@ -175,7 +162,6 @@ a:hover, a:active {
    color: rgb(255, 113, 168);
 }
 
-
 hr {
 	position: relative;
     margin: 2rem auto;
@@ -211,7 +197,6 @@ hr {
 	padding-top: 50px;
 }
 
-
 .tags-cloud {
 	text-align: center;
 	padding-bottom: 100px;
@@ -238,17 +223,10 @@ hr {
   padding: 6px;
   border-radius: 10px;
 }
-
-
 .comments{
 	margin: 0 auto;
 	max-width: 700px;
 }
-
-#dark {
-
-}
-
 .dark {
 	background-color #282c34;
     color: #ccc7c7;
@@ -334,9 +312,6 @@ hr {
 .card:hover {
 	transform: scale(1.1);
 	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
-    background: linear-gradient(90deg, rgba(247, 149, 51, 0.1) 0, rgba(243, 112, 85, 0.1) 15%, rgba(239, 78, 123, 0.1) 30%, rgba(161, 102, 171, 0.1) 44%, rgba(80, 115, 184, 0.1) 58%, rgba(16, 152, 173, 0.1) 72%, rgba(7, 179, 155, 0.1) 86%, rgba(109, 186, 130, 0.1) 100%);
-
-
 }
 .card a {
 	border:none; 
@@ -457,4 +432,8 @@ code {
 .hljs-ln-numbers {
 	padding-right: 0.5em !important;
 }
+
+
+
+
 

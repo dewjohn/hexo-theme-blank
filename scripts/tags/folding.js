@@ -1,5 +1,4 @@
 /**
- * note.js
  * transplant from hexo-theme-volantis
  */
 

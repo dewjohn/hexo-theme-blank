@@ -1,3 +1,4 @@
+
 //导航菜单
 layui.use(['jquery', 'element', 'carousel'], function(){
     var $ = layui.jquery
@@ -10,8 +11,7 @@ layui.use(['jquery', 'element', 'carousel'], function(){
       scr > 0 ? $(".nav").addClass('scroll') : $(".nav").removeClass('scroll');
       scr > 0 ? $(".nav").css('display','block') : $(".nav").css('display','none');
     });
-  
-  
+
     //导航切换
     var btn = $('.nav').find('.nav-list').children('button')
     ,spa = btn.children('span')
@@ -31,7 +31,6 @@ layui.use(['jquery', 'element', 'carousel'], function(){
     });
 });
 
-
 //夜晚模式
 function switchDarkMode() {
 	if ($('body').hasClass('dark')) {
@@ -46,8 +45,6 @@ function switchDarkMode() {
 		localStorage.setItem('noDark', '0');
 	}
 }
-
-
 
 
 

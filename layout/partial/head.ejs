@@ -45,16 +45,18 @@
   <% if (theme.baidu_push.enable){ %>
       <%- partial('partial/third-party/baidu-push') %>
   <% } %>
-  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
-    <% theme.stylesheets.forEach(url => { %>
-      <link rel="stylesheet" href="<%=url%>">
-    <% }); %>
-  <% } %>  
+
 
   <% if (theme.googlefonts.enable){ %>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
     <link rel="stylesheet" href="<%=theme.googlefonts.link%>"  media="print" onload="this.media='all'">
   <% } %>
+
+  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+    <% theme.stylesheets.forEach(url => { %>
+      <link rel="stylesheet" href="<%=url%>">
+    <% }); %>
+  <% } %>  
 
   <% if(theme.highlight.enable) { %>
     <link rel="stylesheet" href="<%= theme.highlight.style %>">
