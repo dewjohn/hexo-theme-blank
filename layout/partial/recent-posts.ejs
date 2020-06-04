@@ -16,7 +16,7 @@
       <div class="post-footer">
         <a class="date" href="<%=url_for(post.path)%>"><i class="far fa-calendar-alt" aria-hidden="true"></i> <%- date(post.date, 'YYYY/M/D') %></a>
         <div class="top">
-          <% if (post.top) { %>
+          <% if (post.top || post.sticky > 0) { %>
             <span class="article-meta__separator"> | </span>
             <i class="fas fa-thumbtack article-meta__icon sticky"></i>
             <span class="sticky">置顶</span>
