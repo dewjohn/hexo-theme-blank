@@ -99,9 +99,12 @@ a:hover, a:active {
 }
 .archive-item {
 	font-size: 20px;
-}
-.container .post-titlebox {
-	text-align: center;
+    border-bottom: 1px dashed #9E9E9E;
+    margin-top: 1em;
+    padding-bottom: 0.5em;
+	list-style-type:none;
+	display: flex;
+	align-items: baseline;
 }
 .container .post-title {
 	font-size: 12px;
@@ -113,20 +116,18 @@ a:hover, a:active {
     background: #f6f6f6;
 }
 .archive-item-link {
-  display: inline-block;
-  width:550px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    font-size: 1.2em;
+    line-height: 1.5;
+	flex: 1;
 }
 .archive-item-link:hover {
-  color: #2d96bd;
+  color: #2a6ef4;
   background-color: transparent;
 }
 .archive-item-date {
   float: right;
-  text-align: right;
   color: #a9a9b3;
+  line-height: 1.5;
 }
 
 .category-list {

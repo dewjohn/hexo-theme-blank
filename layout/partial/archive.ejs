@@ -10,11 +10,10 @@
                 </div>
         </div>
         <% last_year = cur_year; } %>
-        <article class="archive-item">
-            <h1><%=page.title%></h1>
+        <li class="archive-item">
             <a class="archive-item-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
             <span class="archive-item-date"><%- date(post.date, theme.date_format) %></span>
-        </article>
+        </li>
     <% }) %>
     <%- partial('partial/paginator') %>
 </div>
