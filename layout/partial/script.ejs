@@ -1,38 +1,46 @@
-
-
-<script src="https://www.layuicdn.com/layui-v2.5.6/layui.js"></script> 
+<script src="https://www.layuicdn.com/layui-v2.5.6/layui.js"></script>
 
 <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
-    <% theme.scripts.forEach(url => { %>
-      <script src="<%=url%>"></script>
-    <% }); %>
-  <% } %>
-  
-  <% if(theme.fancybox.enable) { %>
-    <script>
-      $("img").not('.page img').not('.nav-logo img').each(function () {
+  <% theme.scripts.forEach(url => { %>
+    <script src="<%= url_for(url) %>"></script>
+  <% }); %>
+<% } %>
+
+<% if(theme.fancybox.enable) { %>
+  <script>
+    $("img").not('.page img').not('.nav-logo img').each(function () {
       var element = document.createElement("a");
       $(element).attr("data-fancybox", "gallery");
       $(element).attr("href", $(this).attr("src"));
       $(this).wrap(element);
-      });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
-    <% } %>
-  
-    <script>
-      var btntop = $('#gotop');
-        btntop.on('click', function (e) {
-          e.preventDefault();
-          $('html, body').animate({ scrollTop: 0 }, '300');
-        });
-      </script>
-      
-    <script>
-      $(document).ready(function() {
-          $('code.hljs').each(function(i, block) {
-              hljs.lineNumbersBlock(block);
-          });
-      });
-    </script>
+    });
+  </script>
+  <script src="<%= theme.fancybox.script %>"></script>
+  <% } %>
 
+<% if(theme.mathjax.enable) { %>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script src="<%= theme.mathjax.script %>"></script>
+<% } %>
+
+<script>
+  var btntop = $('#gotop');
+  btntop.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('code.hljs').each(function (i, block) {
+      hljs.lineNumbersBlock(block);
+    });
+  });
+</script>
