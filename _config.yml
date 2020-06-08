@@ -20,7 +20,7 @@ logo:
 
 
 # 顶部菜单
-menu:    
+menu:
   home: { path: /, fa: fab fa-fort-awesome}
   archive: { path: /archives/, fa: far fa-calendar-check}
   tag: { path: /tags/, fa: fas fa-hashtag}
@@ -50,9 +50,9 @@ baidu_push:
 
 
 #谷歌分析
-google_analytics: 
+google_analytics:
 #百度分析
-baidu_analytics: 
+baidu_analytics:
 
 
 ## Post copyright
@@ -63,8 +63,8 @@ copyright:
 # 备案:
 ICP:
   enable: false
-  link: 
-  text: 
+  link:
+  text:
 #  icon: /img/icp.png
 
 
@@ -81,12 +81,16 @@ highlight:
   style: https://cdn.jsdelivr.net/npm/highlight.js@10.0.3/styles/github.min.css
 # https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/ 找到你喜欢的代码高亮主题并替换上面
 
+#MathJax
+mathjax:
+  enable: true
+  script: https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js
 
 # Valine 评论系统  https://valine.js.org
 valine:
   enable: true # 如果使用valine，请设置改之为true
-  appid: 
-  appkey: 
+  appid:
+  appkey:
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
@@ -94,7 +98,7 @@ valine:
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
   recordIP: false # 是否记录评论者IP
-  serverURLs: 
+  serverURLs:
   emojiCDN: # emoji CDN
   enableQQ: true
 
@@ -121,15 +125,15 @@ mylinks:
     avatar: https://dmx.pub/img/avatar.png
     link: https://dmxz.me
     info: 欢迎来到 DmxZ 的自留地！
-    
+
   - name: DmxZ
     avatar: https://dmx.pub/img/avatar.png
     link: https://dmx.pub
     info: 欢迎来到 DmxZ 的自留地！
-    
+
   - name: DmxZ
     avatar: https://dmx.pub/img/avatar.png
     link: https://dmx.best
     info: 欢迎来到 DmxZ 的自留地！
-    
+
 
