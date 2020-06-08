@@ -43,6 +43,7 @@ todark:
 # fancybox
 fancybox:
   enable: true
+  script: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js
 
 #百度自动推送
 baidu_push:
