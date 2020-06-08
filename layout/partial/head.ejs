@@ -23,10 +23,10 @@
   <% } %>
   <%
   var title = page.title;
-  
+
   if (is_archive()){
       title = __('archive');
-  
+
       if (is_month()){
           title += ': ' + page.year + '/' + page.month;
       } else if (is_year()){
@@ -39,7 +39,7 @@
   }
   %>
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
-  
+
   <%- partial('partial/third-party/google-analytics') %>
   <%- partial('partial/third-party/baidu-analytics') %>
   <% if (theme.baidu_push.enable){ %>
@@ -54,9 +54,9 @@
 
   <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
     <% theme.stylesheets.forEach(url => { %>
-      <link rel="stylesheet" href="<%=url%>">
+      <link rel="stylesheet" href="<%= url_for(url) %>">
     <% }); %>
-  <% } %>  
+  <% } %>
 
   <% if(theme.highlight.enable) { %>
     <link rel="stylesheet" href="<%= theme.highlight.style %>">
