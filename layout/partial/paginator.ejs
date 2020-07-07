@@ -1,7 +1,8 @@
-<div class="paginator">
-      <%- paginator({
-          prev_text: 'Prev',
-          next_text: 'Next'
-        }) %>
-  </div>
-  <br>
+<nav class="paginator">
+      <% if (page.prev){ %>
+            <a class="prev" href="<%= config.root %><%- page.prev_link %>">< <%= __('prev') %></a>
+            <% } %>
+            <% if (page.next){ %>
+            <a class="next" href="<%= config.root %><%- page.next_link %>"><%= __('next') %> ></a>
+            <% } %>
+</nav>

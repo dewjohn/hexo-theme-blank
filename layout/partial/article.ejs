@@ -1,19 +1,47 @@
 
 <article id="post">
-  <div class="post-title"><h1><%= post.title || '(no title)' %></h1></div>
-  <div class="post-date">
-        <span title="发表于 <%- date(post.date, theme.date_format) %>"><i class="far fa-calendar-alt" aria-hidden="true"></i> <%- date(post.date, theme.date_format) %></span>  |  
-        <span title="更新于 <%- date(post.updated, theme.date_format) %>"><i class="fas fa-history" aria-hidden="true"></i> <%- date(post.updated, 'YYYY-MM-DD') %></span>
-        <% if (post.top) { %>
-        <span class="article-meta__separator"> | </span>
-        <i class="fas fa-thumbtack article-meta__icon sticky"></i>
-        <span class="sticky">置顶</span>
+  <div class="post-title"><%= post.title || '(no title)' %></div>
+  <div class="post-meta">
+        <% if (post.top || post.sticky > 0) { %>
+          <div class="post-meta-item top">
+            <i class="far fa-bookmark"></i>
+            <span class="sticky"><%= __('Sticky') %></span>
+          </div>
         <% } %>
-  </div>
-  <br>
-  <div class="content">
+        <% if(theme.post_meta.post.date){ %>
+          <div class="post-meta-item date">
+            <span title="<%= __('created') %> <%- date(post.date, theme.date_format) %>"><i class="far fa-calendar-alt"></i> <%- date(post.date, 'YYYY.MM.DD') %></span>
+          </div>
+          <div class="post-meta-item updated">
+            <span title="<%= __('updated') %> <%- date(post.updated, theme.date_format) %>"><i class="far fa-calendar-check"></i> <%- date(post.updated, 'YYYY.MM.DD') %></span>
+          </div>
+        <% } %> 
+        <% if(theme.post_meta.post.categories && post.categories.length > 0){ %>
+          <div class="post-meta-item categories">
+            <% post.categories.each(function(cate){ %>
+              <i class="fas fa-inbox article-meta__icon"></i> <a href="<%= url_for(cate.path) %>"><%- cate.name %></a>
+            <% }) %>
+          </div>
+        <% } %> 
+        <% if(theme.post_meta.post.wordcount || theme.post_meta.post.min2read){ %>
+         <div class="post-meta-item wordcount">
+            <% if(theme.post_meta.post.wordcount){ %>
+              <i class="fas fa-pencil-alt"></i> <span class="post-count"><%= wordcount(post.content) %> <%= __('words') %></span>
+              <% } %> 
+            <% if(theme.post_meta.post.min2read){ %>
+              <i class="far fa-clock"></i> <span class="post-count"><%= min2read(post.content) %> <%= __('min') %></span>
+              <% } %>                     
+          </div>
+         <% } %>
+   </div>
+<% if(theme.toc.enable && post.toc !== false) {%>
+  <div id="toc" class="toc">
+        <h1><%= __('Toc') %></h1>
+        <%- toc(post.content, {list_number: true}) %>
+    </div>
+  <% } %>
+<div class="content">
       <div><%-page.content%></div>
-
       <div class="post-copyright">
       <% if(theme.copyright.enable){ %>
                 <div class="copyright-item">
@@ -25,36 +53,39 @@
                 <div class="copyright-item">
                     <span> <%= __('License') %>: <%- theme.copyright.license_text %></span>
                 </div>
-      <% } %>
+       <% } %>
       </div>
 </div>
-    <div class="tags-back">
-      <div class="tags">
-        <% post.tags.each(function(tag){%>
-          <i class="fas fa-tags" aria-hidden="true"></i> <a href="<%- url_for(tag.path) %>" class="tag"><%= tag.name %></a>
-        <% }) %>
+<% if(theme.sharejs.enable || theme.reward.enable){%>
+  <div class="share-reward">
+    <div class="share">
+        <%-partial('partial/share_reward/sharejs', {cache:true}) %>
       </div>
-      <div class="back">
-        <a href="javascript:window.history.back();"><i class="fa fa-reply" aria-hidden="true"></i> back</a>
-        <span>· </span>
-        <a href="<%- config.root %>"><i class="fa fa-home" aria-hidden="true"></i> home</a>
+    <div class="reward">
+        <%-partial('partial/share_reward/reward', {cache:true}) %>
       </div>
-
-
-      <hr>
-      <div class="post-nav">
-        <% if (post.prev){ %>
+    </div>
+    <% } %>
+    <div class="post_tags">
+      <% post.tags.each(function(tag){%>
+        <i class="fas fa-tag"></i> <a href="<%- url_for(tag.path) %>" class="tag"><%= tag.name %></a>
+      <% }) %>
+    </div>
+    <div class="post-nav">
+      <% if (post.prev){ %>
         <div class="post-nav-prev post-nav-item">
             <a href="<%- url_for(post.prev.path) %>" ><%= post.prev.title %><i class="fa fa-chevron-left"></i></a>
         </div>
-        <% } %>
-        <% if (post.next){ %>
+      <% } %>
+      <% if (post.next){ %>
         <div class="post-nav-next post-nav-item">
             <a href="<%- url_for(post.next.path) %>" ><%= post.next.title %><i class="fa fa-chevron-right"></i></a>
         </div>
-        <% } %>
-      </div>
-      <div class="comments">
-        <%- partial('partial/comments') %>
-      </div>
+      <% } %>
+    </div>
+
+
+    <div class="comments">
+      <%- partial('partial/comments') %>
+    </div>
 </article>

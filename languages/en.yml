@@ -6,6 +6,21 @@ about: About
 donate: Donate
 guestbook: Guestbook
 friends: Friends
+Sticky: Sticky
+created: Created
+updated: Updated
+words: words
+min: min
+prev: Prev
+next: Next
+Toc: Toc
+Read More: Read More
 Author: Author
 Link: Link
 License: License
+reward:
+  PayPal: PayPal
+  alipay: Alipay
+  wechatpay: Wechatpay
+Go back home: Go back home
+error_title: Page not found

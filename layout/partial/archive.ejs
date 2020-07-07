@@ -15,7 +15,9 @@
             <span class="archive-item-date"><%- date(post.date, theme.date_format) %></span>
         </li>
     <% }) %>
-    <%- partial('partial/paginator') %>
+    <div class="arc_pag">
+       <%- partial('partial/paginator') %>
+     </div>
 </div>
 
 

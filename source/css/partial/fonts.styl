@@ -1,4 +1,63 @@
+@font-face {
+    font-family: 'glyph-correction';
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/fonts/glyph-correction.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/fonts/glyph-correction.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/fonts/glyph-correction.ttf') format('truetype'),
+         url('https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/fonts/glyph-correction.eot') format('embedded-opentype');
+    font-weight: inherit;
+    font-style: inherit;
+}
+@font-face {
+	font-family: 'Amstelvar';
+	font-display: swap;
+	src: url('https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/fonts/Amstelvar-Roman-VF.woff2') format('woff2-variations'),
+			url('https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/fonts/Amstelvar-Roman-VF.woff2') format('woff2');
+	font-weight: 100 900;
+	font-stretch: 50% 125%;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Amstelvar';
+	font-display: swap;
+	src: url('https://cdn.jsdelivr.net/gh/a2396837/CDN/fonts@latest/Amstelvar-Roman-VF.woff2') format('woff2-variations'),
+			url('https://cdn.jsdelivr.net/gh/a2396837/CDN/fonts@latest/Amstelvar-Roman-VF.woff2') format("woff2");
+	font-weight: 100 900;
+	font-stretch: 50% 125%;
+	font-style: italic;
+}
 
+@font-face {
+  font-family: 'chinese-zodiac';
+  font-display: swap;
+  src: url('../fonts/chinese-zodiac.eot');
+  src: url('../fonts/chinese-zodiac.eot') format('embedded-opentype'),
+       url('../fonts/chinese-zodiac.woff2') format('woff2'),
+       url('../fonts/chinese-zodiac.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.symbolic-animals {
+  display: inline-block;
+  font: normal normal normal 14px/1 chinese-zodiac;
+  font-size: larger;
+  float: right;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-dragon:before { content: '\e806'; }
+.icon-tiger:before { content: '\e809'; }
+.icon-pig:before { content: '\e810'; }
+.icon-horse:before { content: '\e813'; }
+.icon-rat:before { content: '\e816'; }
+.icon-goat:before { content: '\e818'; }
+.icon-snake:before { content: '\e820'; }
+.icon-ox:before { content: '\e822'; }
+.icon-dog:before { content: '\e825'; }
+.icon-rabbit:before { content: '\e826'; }
+.icon-monkey:before { content: '\e829'; }
+.icon-rooster:before { content: '\e82f'; }
 
 
 

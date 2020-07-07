@@ -12,32 +12,50 @@ rss: /atom.xml
 
 # 左上角logo
 logo:
-  enable: true
-  url: https://github.com/a2396837     # 点击图标跳转链接
-  icon: fab fa-github                  # fontawesome V5 图标
-  title: 一时开源一时爽，一直开源一直爽   # 鼠标移到图标显示的文字
-
-
-
-# 顶部菜单
-menu:
-  home: { path: /, fa: fab fa-fort-awesome}
-  archive: { path: /archives/, fa: far fa-calendar-check}
-  tag: { path: /tags/, fa: fas fa-hashtag}
-#  category: { path: /category/, fa: far fa-folder-open}
-  about: { path: /about/, fa: fab fa-grav}
-  guestbook: { path: /guestbook/, fa: fab fa-telegram}
-  friends: { path: /link/, fa: fab fa-weixin}
-
+  enable: false
+  url: # 点击图标跳转链接
+  icon: # fontawesome V5 图标
+  title: # 鼠标移到图标显示的文字
 
 
 # 座右铭
 motto: Do what you love,love what you do.
 
 
+# 顶部菜单  
+# 如果不需要显示某项,可以用'#'注释掉
+menu:
+  home: { path: /, fa: fab fa-fort-awesome}
+  archive: { path: /archives/, fa: fas fa-archive}
+  tag: { path: /tags/, fa: fas fa-hashtag}
+  category: { path: /category/, fa: far fa-folder-open}
+  about: { path: /about/, fa: fab fa-grav}
+  guestbook: { path: /guestbook/, fa: fab fa-telegram}
+  friends: { path: /link/, fa: fab fa-weixin}
+
+
 # 是否打开暗黑模式
 todark:
-  enable: true   #是否打开暗黑模式
+  enable: true          # 是否打开暗黑模式
+
+
+# 文章的相关信息
+post_meta:
+  page:
+    date: true                    # 主页是否显示日期
+    categories: true             # 主页是否显示分类
+    wordcount: true             # 主页是否显示字数统计
+    min2read: true             # 主页是否显示阅读时长
+  post:
+    date: true                # 文章页是否显示日期
+    categories: true         # 文章页是否显示字分类
+    wordcount: true         # 文章页是否显示字数统计
+    min2read: true         # 文章页是否显示阅读时长
+    
+
+# 文章目录
+toc:
+  enable: true
 
 
 # fancybox
@@ -45,53 +63,76 @@ fancybox:
   enable: true
   script: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js
 
-#百度自动推送
+
+# 百度自动推送
 baidu_push:
   enable: false
 
-
-#谷歌分析
+# 谷歌分析
 google_analytics:
-#百度分析
-baidu_analytics:
+# 百度分析
+baidu_analytics: 
 
 
-## Post copyright
+# Post copyright
 copyright:
   enable: true
   license_text: 本博客所有文章除特别声明外，均采用许可协议 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！
 
+
+# 文章分享
+sharejs:
+  enable: true
+  sites: facebook,twitter,wechat,weibo,qq
+  style: https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css
+  scripts: https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js
+
+
+# 赞助/捐献
+reward:
+  enable: true
+  AliPayQR: /img/alipay.jpg                  # 支付宝收款码
+  WeChatQR: /img/wechat.jpg                 # 微信收款码
+  PayPalLink: https://paypal.me/           # paypal收款链接
+
+
+# 一个内置的简单404页面
+page_404:
+  enable: true
+  subtitle: 'Oops! Page not found.'
+
+
 # 备案:
 ICP:
   enable: false
-  link:
-  text:
+  link: 
+  text: 
 #  icon: /img/icp.png
 
 
-# Google fonts
+# 全局字体可使用谷歌字体替换
 googlefonts:
-  enable: true
-  font-family: Noto Serif SC, Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, MicrMicrosoft YaHei", Helvetica Neue, Helvetica, Arial, serif, sans-serif
-  link: https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap
+  font-family:
+  link:
 
 
-#highlight
+# highlight代码高亮
 highlight:
   enable: true
-  style: https://cdn.jsdelivr.net/npm/highlight.js@10.0.3/styles/github.min.css
-# https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/ 找到你喜欢的代码高亮主题并替换上面
+  style: https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/atelier-cave-light.css
 
-#MathJax
+
+# MathJax
 mathjax:
-  enable: true
+  enable: false
   script: https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js
+
 
 # Valine 评论系统  https://valine.js.org
 valine:
   enable: true # 如果使用valine，请设置改之为true
-  appid:
-  appkey:
+  appid: # leancloud application app id
+  appkey: # leancloud application app key
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
@@ -120,21 +161,5 @@ scripts:
 - https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.7.0/dist/highlightjs-line-numbers.min.js
 
 
-# 友情链接
-mylinks:
-  - name: DmxZ
-    avatar: https://dmx.pub/img/avatar.png
-    link: https://dmxz.me
-    info: 欢迎来到 DmxZ 的自留地！
-
-  - name: DmxZ
-    avatar: https://dmx.pub/img/avatar.png
-    link: https://dmx.pub
-    info: 欢迎来到 DmxZ 的自留地！
-
-  - name: DmxZ
-    avatar: https://dmx.pub/img/avatar.png
-    link: https://dmx.best
-    info: 欢迎来到 DmxZ 的自留地！
 
 

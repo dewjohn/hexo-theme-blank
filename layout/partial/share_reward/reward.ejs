@@ -1,0 +1,20 @@
+<% if (theme.reward.enable && (theme.reward.AliPayQR || theme.reward.WeChatQR || theme.reward.PayPalLink)) { %>
+  <div style="padding: 10px 0; margin-left: 20px; width: 90%; text-align: center;">
+    <div class="reward-content">
+        <ul id="donateBox" class="list pos-a">
+          <% if(theme.reward.PayPalLink){ %>
+           <li id="PayPal"><a href="<%= theme.reward.PayPalLink %>" target="_blank" title="<%= __('reward.PayPal') %>"><%= __('reward.PayPal') %></a></li>
+           <% } %> 
+          <% if(theme.reward.AliPayQR){ %>
+            <li id="AliPay" data-img="<%= theme.reward.AliPayQR %>" title="<%= __('reward.alipay') %>"><%= __('reward.alipay') %></li>
+           <% } %>    
+          <% if(theme.reward.WeChatQR){ %>       
+            <li id="WeChat" data-img="<%= theme.reward.WeChatQR %>" title="<%= __('reward.wechatpay') %>"><%= __('reward.wechatpay') %></li>
+           <% } %>           
+          </ul>
+        <div id="QRBox" class="pos-f left-100">
+          <div id="MainBox"></div>
+        </div>
+    </div>
+  </div>
+  <% } %>

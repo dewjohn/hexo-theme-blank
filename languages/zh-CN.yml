@@ -6,9 +6,24 @@ about: 关于
 donate: 赞助
 guestbook: 留言
 friends: 友链
+Sticky: 置顶
+created: 发表于
+updated: 更新于
+words: 字
+min: 分钟
+prev: 上一页
+next: 下一页
+Toc: 目录
+Read More: 阅读全文
 Author: 作者
 Link: 链接
 License: 声明
+reward:
+  PayPal: 贝宝
+  alipay: 支付宝
+  wechatpay: 微信
+Go back home: 回到首页
+error_title: 页面没有找到
 
 
 
