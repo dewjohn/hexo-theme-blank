@@ -1,12 +1,10 @@
 
 .header {
-	max-width:700px;
+	max-width:650px;
     padding: 100px 0;
     margin: 0 auto;
     -webkit-background-size: cover;
     background-size: cover;
-
-
 	.title{
 		text-align: center;
 		font-family: auto;
@@ -15,22 +13,24 @@
         font-weight: bold;
         letter-spacing: 5px;
         line-height: 1;
-
-        .logo {
-            color: black;
-            text-decoration: none;
-        }
     }
+	.logo img{
+		width: 120px;
+		height: 120px;
+		border-radius: 70px;
+        transition: all .5s;
+	}
+	.logo img:hover{
+        transform: rotate(360deg);
+	}
 }
-
+$motto_font-size = convert(hexo-config('subtitle.font-size'))
+$motto_color = convert(hexo-config('subtitle.font-color'))
 .motto {
 	text-align: center;
+	font-size: $motto_font-size
+	color: $motto_color
 }
-
-
-
-/*animation starts*/
-
 .animated {
 	-webkit-animation-fill-mode: both;
 	-moz-animation-fill-mode: both;
@@ -99,15 +99,12 @@
 		transform: translateY(0);
 	}
 }
-
 .fadeInDown {
 	-webkit-animation-name: fadeInDown;
 	-moz-animation-name: fadeInDown;
 	-o-animation-name: fadeInDown;
 	animation-name: fadeInDown;
 }
-
-/*animation ends*/
 
 .nav {
 	width: 100%;
@@ -136,12 +133,11 @@
 	transition: all 400ms ease-out;
 
 }
-.nav .nav-logo {
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 15px;
-	line-height: 70px;
+.nav .layui-container .nav-title{
+    padding: 0.6em;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.5em;
 }
 .nav .nav-list {
 	display: inline-block;

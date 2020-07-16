@@ -1,11 +1,10 @@
 #post {
     font-size: 16px;
     line-height: 2;
-    max-width: 700px;
-    padding: 0px 20px;
+    max-width: 650px;
+    padding: 0px 10px;
     height: auto;
     margin: 0 auto;
-    padding-bottom: 5em;
 }
 
 .content img {
@@ -13,11 +12,6 @@
     height: auto;
     margin: 1.5rem auto;
     display: block;
-}
-.post-title {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 2em;
 }
 .post-nav{
     display: flex;
@@ -113,12 +107,15 @@
 .share-reward {
     position: relative;
     margin-bottom: 0.5rem;
-    padding: 0.5rem 0.8rem;
+    margin: 0px 10px;
     border: 1px solid #eee;
     background-color: #fff;
     border-right: 3px !important;
     border-right-style: solid !important;
     border-right-color: #91b3f6 !important;
+}
+.reward {
+    display: inline-block;;
 }
 .share {
     float: right;
@@ -143,9 +140,6 @@
     background: #fff;
     content: '';
 }
-.reward {
-    display: inline-block;
-}
 .post_tags {
     margin: 1rem;
     text-align: center;
@@ -156,6 +150,82 @@
     padding-right: 1em;
     color: #868689;
 }
+
+.table-wrap {
+  margin: 0 0 1rem;
+  table {
+    display: table;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    empty-cells: show;
+    }
+  thead{
+    background: rgba(153,169,191,.1);
+  }
+  th,
+  td {
+    padding: .3rem .6rem;
+    border: 1px solid #d6d6d6;
+    vertical-align: middle;
+  }
+}
+
+
+ol,
+ul
+    margin-top: .4rem
+    padding: 0 0 0 .8rem
+    list-style: none
+    counter-reset: li
+    padding-left: .5rem
+
+li
+    position: relative
+    margin: .2rem 0
+    padding: .1rem .5rem .1rem 1.5rem
+
+
+.content li:before {
+    position: absolute
+    top: 0
+    left: 0
+    background: #dceef7
+    color: #000
+    cursor: pointer
+    transition: all .3s ease-out
+}
+.content li:hover:before {
+    transform: rotate(360deg);
+}
+
+
+.content ol>li:before {
+    margin-top: .45rem
+    width: w = 1.2rem
+    height: h = w
+    border-radius: .5 * w
+    content: counter(li)
+    counter-increment: li
+    text-align: center
+    font-size: .6rem
+    line-height: h
+}
+
+.content ul> li::hover:before
+    border-color: #53c5f9
+
+.content ul> li:before
+    top: 11px;
+    margin-left: 0.2rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border: 0.15rem solid #49b1f5;
+    border-radius: 0.6rem;
+    background: transparent;
+    content: '';
+    line-height: 0.3rem;
+
 
 
 

@@ -10,16 +10,18 @@ favicon: /img/favicon.ico
 rss: /atom.xml
 
 
-# 左上角logo
+# 首页显示Avatar或者Title
 logo:
-  enable: false
-  url: # 点击图标跳转链接
-  icon: # fontawesome V5 图标
-  title: # 鼠标移到图标显示的文字
+  method: 1
+  avatar: 
 
 
 # 座右铭
-motto: Do what you love,love what you do.
+subtitle:
+  enable: true
+  motto: Do what you love,love what you do.
+  font-size: 1.5em
+  font-color: "#000"
 
 
 # 顶部菜单  
@@ -28,15 +30,16 @@ menu:
   home: { path: /, fa: fab fa-fort-awesome}
   archive: { path: /archives/, fa: fas fa-archive}
   tag: { path: /tags/, fa: fas fa-hashtag}
-  category: { path: /category/, fa: far fa-folder-open}
+#  category: { path: /category/, fa: far fa-folder-open}
   about: { path: /about/, fa: fab fa-grav}
   guestbook: { path: /guestbook/, fa: fab fa-telegram}
   friends: { path: /link/, fa: fab fa-weixin}
 
 
+
 # 是否打开暗黑模式
 todark:
-  enable: true          # 是否打开暗黑模式
+  enable: true         
 
 
 # 文章的相关信息
@@ -58,7 +61,20 @@ toc:
   enable: true
 
 
-# fancybox
+# 文章自动摘要
+auto_excerpt:
+  enable: true
+  length: 350
+
+
+# Lazyload (图片懒加载)
+lazyload:
+  enable: true
+  image: /img/loading.gif
+  script: https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js
+
+
+# fancybox (图片放大查看)
 fancybox:
   enable: true
   script: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js

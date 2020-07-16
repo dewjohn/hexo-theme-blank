@@ -1,6 +1,6 @@
 <div class="comments">
     <% if (theme.valine && post.comments){ %>
-      <script src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
       <div id="comment" class="vcomment" ></div>
       <script>
           var notify = '<%= theme.valine.notify %>' == true ? true : false;
@@ -18,7 +18,7 @@
               appKey: "<%= theme.valine.appkey %>",
               avatar: "<%= theme.valine.avatar %>",
               placeholder: "<%= theme.valine.placeholder %>",
-              guest_info:guest_info,
+              guest_info: guest_info,
               pageSize:'<%= theme.valine.pageSize %>',
               recordIP: '<%= theme.valine.recordIP %>',
               serverURLs: "<%= theme.valine.serverURLs %>",

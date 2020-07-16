@@ -29,7 +29,9 @@ git clone https://github.com/a2396837/hexo-theme-blank.git themes/blank
 ## hexo-theme-blank文档
 
 主题安装: [clink here!](https://dmx.pub/posts/a832e6e1.html)
+
 进阶设置：[clink here!](https://dmx.pub/posts/73f92298.html)
+
 标签插件：[clink here!](https://dmx.pub/posts/1dd6ddd1.html)
 
 
@@ -52,4 +54,7 @@ git clone https://github.com/a2396837/hexo-theme-blank.git themes/blank
 2. 如果觉得主题有什么补充,请协助我改进！
 3. 如果在安装主题过程有什么问题，欢迎提 Issues!
 4. 协助我开发主题:可以Fork一份,改好后，可以向我发起 Pr
+
+
+
 

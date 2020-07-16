@@ -45,3 +45,5 @@ function switchDarkMode() {
 		localStorage.setItem('noDark', '0');
 	}
 }
+
+

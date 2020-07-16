@@ -15,6 +15,9 @@ body{
 
 code {
 	font-family: $bodyfont;
+	word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 #post code {
 	background: rgba(27,31,35,.05);
@@ -46,14 +49,15 @@ code {
 }
 
 
-h1:before, h2:before, h3:before {
+.content :before {
     font-family: "Font Awesome 5 Free";
 }
 
-.content h1:hover:before {
-	content: "\f0c1";
+.content h1:before {
+	content: "\f292";
 	font-size: 1em;
-    margin-right: 0.25em;
+    margin-right: 0.15em;
+	color: #2196f3;
 }
 .content h1 {
     font-size: 1.5em;
@@ -61,10 +65,14 @@ h1:before, h2:before, h3:before {
 .content h1:hover {
 	padding-left: 0.5rem;
 }
-.content h2:hover:before {
-	content: "\f0c1";
+.content h1:hover:before {
+	content: "\f1dc""1 ";
+}
+.content h2:before {
+	content: "\f292";
 	font-size: 0.9em;
-    margin-right: 0.25em;
+    margin-right: 0.15em;
+	color:#03a9f4;
 }
 .content h2 {
     font-size: 1.25em;
@@ -72,16 +80,23 @@ h1:before, h2:before, h3:before {
 .content h2:hover {
 	padding-left: 0.5rem;
 }
-.content h3:hover:before {
-	content: "\f0c1";
+.content h2:hover:before {
+	content: "\f1dc""2 ";
+}
+.content h3:before {
+	content: "\f292";
 	font-size: 0.75em;
-    margin-right: 0.25em;
+    margin-right: 0.15em;
+	color: #03a9f49e;
 }
 .content h3 {
-	font-size: 0.9em;
+	font-size: 1em;
 }
 .content h3:hover {
 	padding-left: 0.5rem;
+}
+.content h3:hover:before {
+	content: "\f1dc""3 ";
 }
 
 ::selection {
@@ -128,7 +143,7 @@ li{
 .post-wrap {
   position: relative;
   width: 100%;
-  max-width: 700px;
+  max-width: 650px;
   margin: 0 auto;
   font-size: 16px;
 }
@@ -187,7 +202,10 @@ li{
     content: ')';
 }
 .content {
-	max-width 700px;
+	max-width 650px;
+	padding: 0px 10px;
+	word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 @keyframes heartAnimate {
     0%,100%{transform:scale(1);}
@@ -220,7 +238,7 @@ li{
 	font-size: 90%;
 	color: #999a9b;
     text-align: center;
-	padding-top: 50px;
+	padding-top: 100px;
 }
 #bottom-outer a{
 	color: #999a9b;
@@ -254,11 +272,13 @@ li{
 }
 .comments{
 	margin: 0 auto;
-	max-width: 700px;
+	margin-top: 2em;
+	max-width: 650px;
+
 }
 
 #post .content a {
-	color: #86aac1;
+	color: #4a81a5;
 	word-break: break-word;
 }
 #post .content a:hover {

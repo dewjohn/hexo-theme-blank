@@ -1,10 +1,9 @@
 <div class="nav index" style="height: 60px;">
     <div class="title animated fadeInDown">
         <div class="layui-container">
-            <% if(theme.logo.enable){ %>
-            <div class="nav-logo"> <a href="<%- url_for(theme.logo.url) %>" title="<%= (theme.logo.title) %>"><i
-                        class="<%= (theme.logo.icon) %>" style="font-size: 36px;"></i></a> </div>
-            <% } %>
+            <% if(theme.logo.method == 2){ %>
+                <div class="nav-title"><a href="<%- url_for() %>" title="<%= config.title %>"><%= config.title %></a></div>
+               <% } %>
             <div class="nav-list">
                 <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
                 <ul class="layui-nav" lay-filter="">

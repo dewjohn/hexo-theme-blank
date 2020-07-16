@@ -42,8 +42,8 @@
   <% } %>
 <div class="content">
       <div><%-page.content%></div>
-      <div class="post-copyright">
       <% if(theme.copyright.enable){ %>
+        <div class="post-copyright">
                 <div class="copyright-item">
                     <span> <%= __('Author') %>: <%- config.author %></span>
                 </div>
@@ -53,17 +53,17 @@
                 <div class="copyright-item">
                     <span> <%= __('License') %>: <%- theme.copyright.license_text %></span>
                 </div>
-       <% } %>
-      </div>
+        </div>
+      <% } %>
 </div>
 <% if(theme.sharejs.enable || theme.reward.enable){%>
   <div class="share-reward">
     <div class="share">
-        <%-partial('partial/share_reward/sharejs', {cache:true}) %>
+        <%-partial('partial/third-party/sharejs', {cache:true}) %>
       </div>
-    <div class="reward">
-        <%-partial('partial/share_reward/reward', {cache:true}) %>
-      </div>
+        <div class="reward">
+          <%-partial('partial/third-party/reward', {cache:true}) %>
+        </div>
     </div>
     <% } %>
     <div class="post_tags">

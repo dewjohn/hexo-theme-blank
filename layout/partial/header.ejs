@@ -1,14 +1,26 @@
 
 <header class="header">
     <div class="title animated fadeInDown">
-    <div class="title">
-        <a href="<%- url_for() %>" class="logo"><%= config.title %></a>
+        <% if(theme.logo.method == 1){ %>
+            <div class="title">
+                <a href="<%- url_for() %>"><%= config.title %></a>
+            </div>
+         <% } else if (theme.logo.method == 2) { %>
+            <div class="logo">
+                <% if(theme.lazyload.enable) { %>
+                    <a href="<%- url_for() %>"><img data-src="<%= theme.logo.avatar %>" onerror=this.onerror=null,this.src="<%= url_for(theme.lazyload.image) %>"></a>
+                    <% } else { %>
+                    <a href="<%- url_for() %>"><img src="<%= theme.logo.avatar %>" onerror=this.onerror=null,this.src="<%= url_for(theme.lazyload.image) %>"></a>
+                <% } %>
+            </div>
+         <% } %>
     </div>
-    </div> 
-    <div class="navbar animated fadeInDown">
-        <div class="motto">
-            <h2><%= theme.motto %></h2>
-        </div>
+    <% if(theme.subtitle.enable){ %>
+        <div class="navbar animated fadeInDown">
+            <div class="motto">
+                <span><%= theme.subtitle.motto %></span>
+            </div>
+    <% } %>
 </header>
 
 
