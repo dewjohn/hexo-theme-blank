@@ -20,7 +20,12 @@ code {
     overflow-wrap: break-word;
 }
 #post code {
-	background: rgba(27,31,35,.05);
+	color: #476582;
+    padding: .25rem .5rem;
+    margin: 0;
+    font-size: .85em;
+    background-color: rgba(27,31,35,.05);
+    border-radius: 3px;
     font-family: Consolas,"Panic Sans","DejaVu Sans Mono","Bitstream Vera Sans Mono",Menlo,"Microsoft Yahei"!important;
 }
 .gutter {
@@ -138,6 +143,7 @@ li{
 }
 .pagetitle {
 	text-align: center;
+	padding-bottom: 2em;
 }
 
 .post-wrap {
@@ -351,6 +357,9 @@ li{
 	font-style: italic;
 	overflow: hidden;
 	width: 100%;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
 }
 .card .card-header a {
 	font-style: normal;

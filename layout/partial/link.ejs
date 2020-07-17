@@ -10,8 +10,8 @@
                          <img class="ava" src="<%= site.data.links[i].avatar %>" onerror=this.onerror=null,this.src="<%= url_for(theme.lazyload.image) %>">
                        <% } %>
                         <div class="card-header">
-                        <div><a href="<%= site.data.links[i].link %>" target="_blank"><%= site.data.links[i].name %></a></div>
-                        <div class="info"><%= site.data.links[i].info %></div>
+                        <div><a href="<%= site.data.links[i].link %>" target="_blank" title="<%= site.data.links[i].name %>"><%= site.data.links[i].name %></a></div>
+                        <div class="info" title="<%= site.data.links[i].info %>"><%= site.data.links[i].info %></div>
                         </div>
                     </div>
                 <% } %>
