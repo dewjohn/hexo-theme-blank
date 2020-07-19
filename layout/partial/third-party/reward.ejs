@@ -6,10 +6,10 @@
            <li id="PayPal"><a href="<%= theme.reward.PayPalLink %>" target="_blank" title="<%= __('reward.PayPal') %>"><%= __('reward.PayPal') %></a></li>
            <% } %> 
           <% if(theme.reward.AliPayQR){ %>
-            <li id="AliPay" data-img="<%= theme.reward.AliPayQR %>" title="<%= __('reward.alipay') %>"><%= __('reward.alipay') %></li>
+            <li id="AliPay" title="<%= __('reward.alipay') %>"><img data-img="<%= theme.reward.AliPayQR %>" onerror=this.onerror=null,this.src="<%= url_for(theme.lazyload.image) %>"></img></li>
            <% } %>    
           <% if(theme.reward.WeChatQR){ %>       
-            <li id="WeChat" data-img="<%= theme.reward.WeChatQR %>" title="<%= __('reward.wechatpay') %>"><%= __('reward.wechatpay') %></li>
+            <li id="WeChat" title="<%= __('reward.wechatpay') %>"><img date-img="<%= theme.reward.WeChatQR %>" onerror=this.onerror=null,this.src="<%= url_for(theme.lazyload.image) %>"></img></li>
            <% } %>           
           </ul>
         <div id="QRBox" class="pos-f left-100">

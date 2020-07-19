@@ -20,7 +20,7 @@
 
 <% if(theme.fancybox.enable) { %>
   <script>
-    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img'))
+    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
     images.each(function (i, o) {
       var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
       $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
@@ -78,7 +78,7 @@ jQuery(document).ready(function () {
     if (QR) {
       MainBox.css('background-image', 'url(' + QR + ')');
     }
-    $('#DonateText,#donateBox,#github').addClass('blur');
+    $('#donateBox').addClass('blur');
     QRBox.fadeIn(300, function (argument) {
       MainBox.addClass('showQR');
     });
