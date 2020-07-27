@@ -21,7 +21,7 @@ p.note::before
 
 .note::before {
     position: absolute;
-    top: 25px;
+    top: 13px;
     left: 15px;
     font-size: larger;
     font-weight: 600;
@@ -85,3 +85,75 @@ p.note::before
   content: "\f0eb";
   color: #0f0f0f;
 
+
+span.inline-tag {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 90%;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .1rem;
+    border-radius: 6px;
+    background-color: var(--Color)
+}
+
+p.red,
+span.red {
+    --Color: rgb(233, 30, 100);
+    --ColorA: rgba(233, 30, 100, 0.2);
+}
+
+p.green,
+span.green {
+    --Color: rgb(139, 195, 74);
+    --ColorA: rgba(139, 195, 74, 0.2);
+}
+
+p.blue,
+span.blue {
+    --Color: rgb(3, 169, 244);
+    --ColorA: rgba(3, 169, 244, 0.2);
+}
+
+p.yellow,
+span.yellow {
+    --Color: rgb(255, 193, 7);
+    --ColorA: rgba(255, 193, 7, 0.2);
+}
+
+p.grey,
+span.grey {
+    --Color: rgb(76, 76, 76);
+    --ColorA: rgba(76, 76, 76, 0.2);
+}
+
+p.div-border {
+    padding: 10px;
+    border: 1px solid var(--Color,#333);
+    border-radius: 0.4rem;
+    background-color: var(--ColorA, transparent);
+}
+
+p.left {
+    border-left-width: 5px;
+    border-left-color: var(--Color);
+}
+
+p.bottom {
+    border-bottom-width: 5px;
+    border-bottom-color: var(--Color);
+}
+
+p.right {
+    border-right-width: 5px;
+    border-right-color: var(--Color);
+}
+
+p.top {
+    border-top-width: 5px;
+    border-top-color: var(--Color);
+}

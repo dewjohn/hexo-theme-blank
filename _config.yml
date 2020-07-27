@@ -10,20 +10,6 @@ favicon: /img/favicon.ico
 rss: /atom.xml
 
 
-# 首页显示Avatar或者Title
-logo:
-  method: 1
-  avatar: 
-
-
-# 座右铭
-subtitle:
-  enable: true
-  motto: Do what you love,love what you do.
-  font-size: 1.5em
-  font-color: "#c7a2a2"
-
-
 # 顶部菜单  
 # 如果不需要显示某项,可以用'#'注释掉
 menu:
@@ -34,12 +20,38 @@ menu:
   about: { path: /about/, fa: fab fa-grav}
   guestbook: { path: /guestbook/, fa: fab fa-telegram}
   friends: { path: /link/, fa: fab fa-weixin}
+  说说: {path: /shuoshuo/, fa: fas fa-coffee}
+
+
+# 首页显示Avatar或者Title
+logo:
+  method: 1
+  avatar: 
+
+
+# 如果 method: 1只显示座右铭；method: 2则同时显示座右铭和社交图标；method: 3只显示社交图标
+subtitle_social: 
+  method: 1
+  subtitle:
+    motto: Do what you love,love what you do.
+    font-size: 1.25em
+    font-color: "#84ccc9"
+
+  social:
+    Github:
+      icon: fab fa-github
+      url: https://github.com/a2396837
+    Email:
+      icon: fa fa-envelope
+      url: mailto:894049579@qq.com
+
+
 
 
 
 # 是否打开暗黑模式
 todark:
-  enable: true         
+  enable: true          # 是否打开暗黑模式
 
 
 # 文章的相关信息
@@ -68,13 +80,14 @@ auto_excerpt:
 
 
 # Lazyload (图片懒加载)
+# https://github.com/verlok/lazyload
 lazyload:
   enable: true
   image: /img/loading.gif
   script: https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js
 
 
-# fancybox (图片放大查看)
+# fancybox
 fancybox:
   enable: true
   script: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js
@@ -87,7 +100,7 @@ baidu_push:
 # 谷歌分析
 google_analytics:
 # 百度分析
-baidu_analytics: 
+baidu_analytics: 9df80ee3a79777ffce442320dbbba26d
 
 
 # Post copyright
@@ -107,9 +120,9 @@ sharejs:
 # 赞助/捐献
 reward:
   enable: true
-  AliPayQR: /img/alipay.jpg                  # 支付宝收款码
-  WeChatQR: /img/wechat.jpg                 # 微信收款码
-  PayPalLink: https://paypal.me/           # paypal收款链接
+  AliPayQR: /img/alipay.jpg                 # 支付宝收款码
+  WeChatQR: /img/wechat.jpg                # 微信收款码
+  PayPalLink: https://paypal.me                            # paypal收款链接
 
 
 # 一个内置的简单404页面
@@ -132,10 +145,17 @@ googlefonts:
   link:
 
 
-# highlight代码高亮
+# highlight
 highlight:
   enable: true
-  style: https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/atelier-cave-light.css
+  style: https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/github.css
+#   https://www.jsdelivr.com/package/npm/highlight.js?path=styles 找到你喜欢的代码高亮主题并替换上面
+
+
+# mermaid
+mermaid:
+  enable: false
+  script: https://cdn.jsdelivr.net/npm/mermaid@8.6.3/dist/mermaid.min.js
 
 
 # MathJax
@@ -147,8 +167,8 @@ mathjax:
 # Valine 评论系统  https://valine.js.org
 valine:
   enable: true # 如果使用valine，请设置改之为true
-  appid: # leancloud application app id
-  appkey: # leancloud application app key
+  appid: 
+  appkey: 
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
@@ -157,8 +177,9 @@ valine:
   pageSize: 10 # pagination size
   recordIP: false # 是否记录评论者IP
   serverURLs:
-  emojiCDN: # emoji CDN
+  emojiCDN: 
   enableQQ: true
+
 
 
 # stylesheets loaded in the <head>
@@ -167,6 +188,7 @@ stylesheets:
 - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
 #- https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
 - https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css
+- https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/socialiconfont.css
 
 
 # scripts loaded in the end of the body

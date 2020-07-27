@@ -5,7 +5,7 @@
             <div class="title">
                 <a href="<%- url_for() %>"><%= config.title %></a>
             </div>
-         <% } else if (theme.logo.method == 2) { %>
+         <% } else if (theme.logo.method == 2 && theme.logo.avatar) { %>
             <div class="logo">
                 <% if(theme.lazyload.enable) { %>
                     <a href="<%- url_for() %>"><img data-src="<%= theme.logo.avatar %>" onerror=this.onerror=null,this.src="<%= url_for(theme.lazyload.image) %>"></a>
@@ -15,12 +15,23 @@
             </div>
          <% } %>
     </div>
-    <% if(theme.subtitle.enable){ %>
-        <div class="navbar animated fadeInDown">
+    <div class="navbar animated fadeInDown">
+     <% if(theme.subtitle_social.method == 1 || theme.subtitle_social.method == 2){ %>
+
             <div class="motto">
-                <span><%= theme.subtitle.motto %></span>
+                <span><%= theme.subtitle_social.subtitle.motto %></span>
             </div>
     <% } %>
+    <% if(theme.subtitle_social.method == 2 || theme.subtitle_social.method == 3) { %>
+            <div class="social">
+                <% for (var i in theme.subtitle_social.social) { %>
+                        <a class="social-icon" href="<%= theme.subtitle_social.social[i].url%>" target="_blank" title="<%= i %>">
+                            <i class="<%= theme.subtitle_social.social[i].icon %>" aria-hidden="true"></i>
+                          </a>
+                 <% } %>
+            </div>
+    <% } %> 
+   </div>
 </header>
 
 

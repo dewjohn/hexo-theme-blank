@@ -57,13 +57,28 @@
   });
 </script>
 
-<script>
-  $(document).ready(function () {
-    $('code.hljs').each(function (i, block) {
-      hljs.lineNumbersBlock(block);
+<% if(theme.mermaid.enable) { %>
+  <script src="<%= theme.mermaid.script %>"></script>
+  <script>mermaid.initialize({startOnLoad:true});</script>
+  <script>
+    $(document).ready(function () {
+      $('code.hljs').each(function (i, block) {
+        if ($.inArray(block.className, ['mermaid']) < 0) {
+          hljs.lineNumbersBlock(block);
+        }
+      });
     });
-  });
-</script>
+    </script>
+  <% } else { %>
+    <script>
+      $(document).ready(function () {
+        $('code.hljs').each(function (i, block) {
+          hljs.lineNumbersBlock(block);
+        });
+      });
+    </script>
+  <% } %>
+
 
 <% if(theme.reward.enable && is_post()) { %>
 <script>
@@ -113,5 +128,6 @@ jQuery(document).ready(function () {
     $(this).wrap('<div class="table-wrap"></div>')
   })
 </script>
+
 
 

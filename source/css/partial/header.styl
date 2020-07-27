@@ -8,11 +8,11 @@
 	.title{
 		text-align: center;
 		font-family: auto;
-        text-decoration: none;
-        font-size: 4rem;
-        font-weight: bold;
-        letter-spacing: 5px;
-        line-height: 1;
+		text-decoration: none;
+		font-size: 5rem;
+		font-weight: bold;
+		letter-spacing: 5px;
+		line-height: 1.5;
     }
 	.logo img{
 		width: 120px;
@@ -24,12 +24,21 @@
         transform: rotate(360deg);
 	}
 }
-$motto_font-size = convert(hexo-config('subtitle.font-size'))
-$motto_color = convert(hexo-config('subtitle.font-color'))
+$motto_font-size = convert(hexo-config('subtitle_social.subtitle.font-size'))
+$motto_color = convert(hexo-config('subtitle_social.subtitle.font-color'))
 .motto {
 	text-align: center;
+	margin: 0.5em;
 	font-size: $motto_font-size
 	color: $motto_color
+}
+.social {
+	text-align: center;
+	margin: 1em 2em;
+}
+.social-icon {
+	margin: 0 .5rem;
+    font-size: 1.25rem;
 }
 .animated {
 	-webkit-animation-fill-mode: both;
@@ -124,7 +133,8 @@ $motto_color = convert(hexo-config('subtitle.font-color'))
 	box-shadow: 0 0 0 0 rgba(0,0,0,0.05);
 }
 .nav.scroll {
-	background: #FFF;
+	-webkit-backdrop-filter: saturate(180%) blur(1em);
+    backdrop-filter: saturate(180%) blur(1em);
 	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.05);
 	transition: 0.3s
 }
@@ -226,6 +236,8 @@ $motto_color = convert(hexo-config('subtitle.font-color'))
 }
 .nav.index {
 	background: rgba(255, 255, 255 ,0.3);
+	-webkit-backdrop-filter: saturate(180%) blur(1em);
+    backdrop-filter: saturate(180%) blur(1em);
 }
 .nav .nav-list button {
 	display: none;
