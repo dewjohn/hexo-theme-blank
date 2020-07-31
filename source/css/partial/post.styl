@@ -33,9 +33,15 @@
     text-align: right;
     font-weight: 600;
 }
+.post-nav-next a {
+    transform: translateX(-4px);
+}
 .post-nav-prev a {
     font-weight: 600;
     padding-left: 1em;
+}
+.post-nav-prev a {
+    transform: translateX(4px);
 }
 .post-nav-prev .fa {
     position: absolute;
@@ -173,10 +179,9 @@
 
 .content ol, ul
     margin-top: .4rem
-    padding: 0 0 0 .8rem
+    padding: 0 0 0 .2rem
     list-style: none
     counter-reset: li
-    padding-left: .5rem
 
 .content li
     position: relative
@@ -208,17 +213,18 @@
     line-height: h
 }
 
-.content ul> li::hover:before
-    border-color: #53c5f9
+.content ul> li:hover:before
+    border-color: #673ab7
 
 .content ul> li:before
-    top: 11px;
+    top: 12px;
     margin-left: 0.2rem;
-    width: 0.6rem;
-    height: 0.6rem;
+    width: 0.4rem;
+    height: 0.4rem;
     border: 0.15rem solid #53c5f9;
     border-radius: 0.6rem;
     background: transparent;
     content: '';
     line-height: 0.3rem;
+
 

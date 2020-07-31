@@ -1,61 +1,29 @@
 
 <article id="post">
   <div class="post-title"><%= post.title || '(no title)' %></div>
-  <div class="post-meta">
-        <% if (post.top || post.sticky > 0) { %>
-          <div class="post-meta-item top">
-            <i class="far fa-bookmark"></i>
-            <span class="sticky"><%= __('Sticky') %></span>
+  <%- partial('partial/post-meta', {cache:true}) %>
+  <% if(theme.toc.enable && post.toc !== false) {%>
+    <div id="toc" class="toc">
+          <h1><%= __('Toc') %></h1>
+          <%- toc(post.content, {list_number: true}) %>
+      </div>
+    <% } %>
+  <div class="content">
+        <div><%-page.content%></div>
+        <% if(theme.copyright.enable){ %>
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> <%= __('Author') %>: <%- config.author %></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> <%= __('Link') %>: <a href="<%- page.permalink %>"><%- page.permalink %></a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> <%= __('License') %>: <%- theme.copyright.license_text %></span>
+                  </div>
           </div>
         <% } %>
-        <% if(theme.post_meta.post.date){ %>
-          <div class="post-meta-item date">
-            <span title="<%= __('created') %> <%- date(post.date, theme.date_format) %>"><i class="far fa-calendar-alt"></i> <%- date(post.date, 'YYYY.MM.DD') %></span>
-          </div>
-          <div class="post-meta-item updated">
-            <span title="<%= __('updated') %> <%- date(post.updated, theme.date_format) %>"><i class="far fa-calendar-check"></i> <%- date(post.updated, 'YYYY.MM.DD') %></span>
-          </div>
-        <% } %> 
-        <% if(theme.post_meta.post.categories && post.categories.length > 0){ %>
-          <div class="post-meta-item categories">
-            <% post.categories.each(function(cate){ %>
-              <i class="fas fa-inbox article-meta__icon"></i> <a href="<%= url_for(cate.path) %>"><%- cate.name %></a>
-            <% }) %>
-          </div>
-        <% } %> 
-        <% if(theme.post_meta.post.wordcount || theme.post_meta.post.min2read){ %>
-         <div class="post-meta-item wordcount">
-            <% if(theme.post_meta.post.wordcount){ %>
-              <i class="fas fa-pencil-alt"></i> <span class="post-count"><%= wordcount(post.content) %> <%= __('words') %></span>
-              <% } %> 
-            <% if(theme.post_meta.post.min2read){ %>
-              <i class="far fa-clock"></i> <span class="post-count"><%= min2read(post.content) %> <%= __('min') %></span>
-              <% } %>                     
-          </div>
-         <% } %>
-   </div>
-<% if(theme.toc.enable && post.toc !== false) {%>
-  <div id="toc" class="toc">
-        <h1><%= __('Toc') %></h1>
-        <%- toc(post.content, {list_number: true}) %>
-    </div>
-  <% } %>
-<div class="content">
-      <div><%-page.content%></div>
-      <% if(theme.copyright.enable){ %>
-        <div class="post-copyright">
-                <div class="copyright-item">
-                    <span> <%= __('Author') %>: <%- config.author %></span>
-                </div>
-                <div class="copyright-item">
-                    <span> <%= __('Link') %>: <a href="<%- page.permalink %>"><%- page.permalink %></a></span>
-                </div>
-                <div class="copyright-item">
-                    <span> <%= __('License') %>: <%- theme.copyright.license_text %></span>
-                </div>
-        </div>
-      <% } %>
-</div>
+  </div>
 <% if(theme.sharejs.enable || theme.reward.enable){%>
   <div class="share-reward">
     <div class="share">

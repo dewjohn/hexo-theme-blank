@@ -16,35 +16,38 @@ menu:
   home: { path: /, fa: fab fa-fort-awesome}
   archive: { path: /archives/, fa: fas fa-archive}
   tag: { path: /tags/, fa: fas fa-hashtag}
-#  category: { path: /category/, fa: far fa-folder-open}
+  categories: { path: /categories/, fa: far fa-folder-open}
   about: { path: /about/, fa: fab fa-grav}
   guestbook: { path: /guestbook/, fa: fab fa-telegram}
   friends: { path: /link/, fa: fab fa-weixin}
   说说: {path: /shuoshuo/, fa: fas fa-coffee}
 
 
-# 首页显示Avatar或者Title
+# 首页
+# method: 1显示Title
+# method: 2显示Avatar
 logo:
-  method: 1
-  avatar: 
+  method: 2
+  avatar: https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/images/2020/07/27/baokemeng.webp
 
 
-# 如果 method: 1只显示座右铭；method: 2则同时显示座右铭和社交图标；method: 3只显示社交图标
+# method: 1,只显示座右铭
+# method: 2,则同时显示座右铭和社交图标
+# method: 3,只显示社交图标
 subtitle_social: 
-  method: 1
+  method: 3
   subtitle:
     motto: Do what you love,love what you do.
     font-size: 1.25em
     font-color: "#84ccc9"
 
   social:
-    Github:
-      icon: fab fa-github
-      url: https://github.com/a2396837
-    Email:
-      icon: fa fa-envelope
-      url: mailto:894049579@qq.com
-
+  Github:
+    icon: fab fa-github
+    url: https://github.com/a2396837
+  Email:
+    icon: fa fa-envelope
+    url: mailto:894049579@qq.com
 
 
 
@@ -100,7 +103,7 @@ baidu_push:
 # 谷歌分析
 google_analytics:
 # 百度分析
-baidu_analytics: 9df80ee3a79777ffce442320dbbba26d
+baidu_analytics: 
 
 
 # Post copyright
@@ -133,7 +136,7 @@ page_404:
 
 # 备案:
 ICP:
-  enable: false
+  enable: true
   link: 
   text: 
 #  icon: /img/icp.png
@@ -154,7 +157,7 @@ highlight:
 
 # mermaid
 mermaid:
-  enable: false
+  enable: true
   script: https://cdn.jsdelivr.net/npm/mermaid@8.6.3/dist/mermaid.min.js
 
 
@@ -167,8 +170,8 @@ mathjax:
 # Valine 评论系统  https://valine.js.org
 valine:
   enable: true # 如果使用valine，请设置改之为true
-  appid: 
-  appkey: 
+  appid: # leancloud application app id
+  appkey: # leancloud application app key
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
@@ -177,7 +180,7 @@ valine:
   pageSize: 10 # pagination size
   recordIP: false # 是否记录评论者IP
   serverURLs:
-  emojiCDN: 
+  emojiCDN: # emoji CDN
   enableQQ: true
 
 
@@ -188,7 +191,6 @@ stylesheets:
 - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
 #- https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
 - https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css
-- https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/socialiconfont.css
 
 
 # scripts loaded in the end of the body

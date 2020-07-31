@@ -1,0 +1,35 @@
+
+<div class="post-meta">
+    <% if (post.top || post.sticky > 0) { %>
+      <div class="post-meta-item top">
+        <i class="far fa-bookmark"></i>
+        <span class="sticky"><%= __('Sticky') %></span>
+      </div>
+    <% } %>
+    <% if(theme.post_meta.page.date){ %>
+      <div class="post-meta-item date">
+        <span title="<%= __('created') %> <%- date(post.date, 'YYYY.MM.DD') %>"><i class="far fa-calendar-alt"></i> <%- date(post.date, 'YYYY.MM.DD') %></span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="<%= __('updated') %> <%- date(post.updated, 'YYYY.MM.DD') %>"><i class="far fa-calendar-check"></i> <%- date(post.updated, 'YYYY.MM.DD') %></span>
+      </div>
+    <% } %> 
+    <% if(theme.post_meta.page.categories && post.categories.length > 0){ %>
+      <div class="post-meta-item categories">
+        <% post.categories.each(function(cate){ %>
+          <i class="fas fa-inbox article-meta__icon"></i> <a href="<%= url_for(cate.path) %>"><%- cate.name %></a>
+        <% }) %>
+      </div>
+    <% } %> 
+    <% if(theme.post_meta.page.wordcount || theme.post_meta.page.min2read){ %>
+     <div class="post-meta-item wordcount">
+        <% if(theme.post_meta.page.wordcount){ %>
+          <i class="fas fa-pencil-alt"></i> <span class="post-count"><%= wordcount(post.content) %> <%= __('words') %></span>
+          <% } %> 
+        <% if(theme.post_meta.page.min2read){ %>
+          <i class="far fa-clock"></i> <span class="post-count"><%= min2read(post.content) %> <%= __('min') %></span>
+          <% } %>                     
+      </div>
+     <% } %>
+</div>
+

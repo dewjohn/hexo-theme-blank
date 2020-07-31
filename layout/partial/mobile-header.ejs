@@ -12,7 +12,7 @@
                     <li class="layui-nav-item">
                         <a href="<%- url_for(theme.menu[name].path) %>">
                             <i class="<%= theme.menu[name].fa %>"></i>
-                            <%- __(name) %>
+                            <span class="layui-nav-item-name"><%- __(name) %></span>
                         </a>
                     </li>
                     <% } %>

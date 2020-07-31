@@ -14,23 +14,22 @@ body{
 }
 
 code {
-	font-family: $bodyfont;
 	word-wrap: break-word;
     word-break: break-word;
     overflow-wrap: break-word;
 }
-#post code {
-	color: #476582;
-    padding: .25rem .5rem;
+code {
+    color: #476582;
+    padding: 0.25rem 0.5rem;
     margin: 0;
-    font-size: .9em;
-    background-color: rgba(27,31,35,.05);
+    font-size: 0.9em;
+    background-color: rgba(27,31,35,0.05);
     border-radius: 3px;
+	font-family: Consolas,"Panic Sans","DejaVu Sans Mono","Bitstream Vera Sans Mono",Menlo,"Microsoft Yahei"!important;
 }
 .gutter {
 	font-size: .9em;
 	padding-right: 0.5em;
-	font-family: Consolas,"Panic Sans","DejaVu Sans Mono","Bitstream Vera Sans Mono",Menlo,"Microsoft Yahei"!important;
 }
 .hljs-ln-numbers {
     -webkit-touch-callout: none;
@@ -187,16 +186,17 @@ li{
     margin: 2em;
     font-size: 1.25em;
 }
-.category-list {
-	list-style-type: none;
-	.category-list-item {
-	padding: 5px;
-    text-decoration: none;
-    overflow: hidden;
-    white-space: nowrap;
-	}
+.category ul {
+    margin-top: .4rem;
+    padding: 0 0 0 1rem;
+    list-style: none;
+    counter-reset: li;
 }
-
+.category ul li {
+    position: relative;
+    margin: .3rem 0;
+    padding: .1rem .2rem .1rem 1rem;
+}
 .category-list-count {
 	color: #858585;
 	padding: 10px;
@@ -240,6 +240,7 @@ li{
 .paginator .next{
 	float: right;
 }
+
 #bottom-outer {
 	font-size: 90%;
 	color: #999a9b;
@@ -252,18 +253,13 @@ li{
 
 .tags-cloud {
 	text-align: center;
-	padding-bottom: 100px;
+	word-break: break-word;
 }
 
 .content .tags-cloud a {
 	padding-right: 20px;
 	text-decoration: none;
 }
-
-.category {
-	padding-bottom: 100px;
-}
-
 #gotop {
   display: none;
   position: fixed;
