@@ -10,7 +10,7 @@ a simple hexo theme
 
 # Screenshots
 
-<img src="https://cdn.jsdelivr.net/gh/a2396837/hexophoto/img/screenshot.png" width="50%" height="50%">
+![](https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/images/2020/07/31/f8d940f84782513a021772cfda4d11c9.png)
 
 
 
