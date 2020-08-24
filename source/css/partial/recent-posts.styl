@@ -1,6 +1,6 @@
 #recent-posts {
     max-width: 650px;
-    padding: 0px 10px;
+    padding: 0px 5px;
     height: auto;
     margin: 0 auto;
     line-height: 2;
@@ -8,16 +8,20 @@
 .post-title  {
     text-align: center;
     text-decoration: none;
-    color: #5f5f5f;
     font-size: 1.8em;
+    a {
+        color: var(--text);
+    }
 }
 .readmore {
     text-align: center;
     margin-top: 1.618em;
     margin-bottom: 5em;
+    a {
+        color: var(--text);
+    }
 }
 .post-meta {
-    color: #bbbbbb;
     font-size: 80%;
     text-align: center;
     margin: 1rem 0;
@@ -25,10 +29,10 @@
 .post-meta-item {
     margin: 0.25em;
     display: inline-block;
-    color: #bbbbbb;
+    color: var(--meta);
 }
 .post-meta-item a{
-    color: #bbbbbb;    
+    color: var(--meta); 
 }
 
     

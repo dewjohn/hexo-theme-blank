@@ -1,3 +1,6 @@
+p {
+    color: var(--text);
+}
 #post {
     font-size: 16px;
     line-height: 2;
@@ -6,7 +9,6 @@
     height: auto;
     margin: 0 auto;
 }
-
 .content img {
     max-width: 100%;
     height: auto;
@@ -57,18 +59,16 @@
     font-size: 12px;
     line-height: 100%;
 }
-
 .post-copyright  {
     position: relative;
     margin: 2rem 0 0.5rem;
     padding: 0.5rem 0.8rem;
     border: 1px solid #eee;
-    background-color: #fff;
+    background-color: var(--cpyr);
     border-left: 3px !important;
     border-left-style: solid !important;
     border-left-color: #91b3f6 !important;
 }
-
 .post-copyright::before {
     position: absolute;
     top: 0.5rem;
@@ -108,14 +108,14 @@
     margin-bottom: 5em;
     overflow: auto hidden;
     white-space: nowrap;
+    color: var(--text);
     border-bottom: 1px solid #eaecef;
 }
 .share-reward {
     position: relative;
     margin-bottom: 0.5rem;
-    margin: 0px 10px;
     border: 1px solid #eee;
-    background-color: #fff;
+    background-color: var(--cpyr);
     border-right: 3px !important;
     border-right-style: solid !important;
     border-right-color: #91b3f6 !important;
@@ -176,19 +176,56 @@
     vertical-align: middle;
   }
 }
-
-.content ol, ul
+.content :after {
+    font-family: "Font Awesome 5 Free";
+}
+.content h1:after {
+	content: "\f292";
+	font-size: 1em;
+    margin-left: 0.15em;
+	color: #cdddea;;
+}
+.content h1 {
+    font-size: 1.5em;
+}
+.content h1:hover {
+	padding-left: 0.5rem;
+}
+.content h2:after {
+	content: "\f292";
+	font-size: 0.9em;
+    margin-left: 0.15em;
+	color:#cdddea;;
+}
+.content h2 {
+    font-size: 1.25em;
+}
+.content h2:hover {
+	padding-left: 0.5rem;
+}
+.content h3:after {
+	content: "\f292";
+	font-size: 0.75em;
+    margin-left: 0.15em;
+	color: #cdddea;;
+}
+.content h3 {
+	font-size: 1em;
+}
+.content h3:hover {
+	padding-left: 0.5rem;
+}
+.content ol, ul {
     margin-top: .4rem
     padding: 0 0 0 .2rem
     list-style: none
     counter-reset: li
-
-.content li
+}
+.content li {
     position: relative
     margin: .2rem 0
     padding: .1rem .5rem .1rem 1.5rem
-
-
+}
 .content li:before {
     position: absolute
     top: 0
@@ -212,11 +249,10 @@
     font-size: .6rem
     line-height: h
 }
-
-.content ul> li:hover:before
+.content ul:not(#maina)> li:hover:before {
     border-color: #673ab7
-
-.content ul> li:before
+}
+.content ul:not(#maina):not(.search-result-list)> li:before {
     top: 12px;
     margin-left: 0.2rem;
     width: 0.4rem;
@@ -226,5 +262,5 @@
     background: transparent;
     content: '';
     line-height: 0.3rem;
-
+}
 

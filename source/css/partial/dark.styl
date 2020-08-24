@@ -1,36 +1,40 @@
-.dark {
-	background-color #282c34;
-    color: #ccc7c7;
-	.recent-post-item {
-	background-color #282c34;
-    color #a09c9c;
-	}
-	img {
+
+:root{
+  --color-mode: light
+  --text: #333;
+  --link: #000;
+  --code: #476582;
+  --codebg: rgba(27,31,35,0.05);
+  --bg: #fff;
+  --navbg: #fff;
+  --item: #000;
+  --meta: #bbbbbb;
+  --cpyr: #fff
+  }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+}
+[data-user-color-scheme="dark"] {
+  --color-mode:'dark'
+  --text: rgba(255,255,255,0.86);
+  --link: #def2ff;
+  --bg: #181c27;
+  --code: #c3c7cb;
+  --codebg: #3e4b5e;
+  --navbg: #252d38;
+  --item: rgba(255,255,255,0.86);
+  --meta: #bbbbbb7a;
+  --cpyr: #252d38;
+  img {
 	   filter: brightness(50%);
 	}
-	.valine {
-		background: #2f3742!important;
-	}
-	#myBtn {
-		background-color #282c34;
-	}
-	.hljs {
-        filter: brightness(50%);
-	}
-	.post-copyright {
-		background-color: #282c34;
-	}
-	.share-reward {
-		background-color: #282c34;
-	}
-	a:link, a:visited {
-		color: #ccc7c7;
-    }
-	.header .title {
-        color: #ffffffa6;
-	}
-	.note {
+  .note {
 		filter: brightness(50%)
 	}
-
+  .highlight, .gutter {
+    background-color: #3c495b !important;
+  }
 }

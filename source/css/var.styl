@@ -1,0 +1,9 @@
+$dafault-font-family = convert(hexo-config('fonts.font-family'))
+$bodyfont = hexo-config('fonts.font-family') ? unquote(hexo-config('fonts.font-family')) : $dafault-font-family
+$title_font = hexo-config('title_font.font-family') ? unquote(hexo-config('title_font.font-family')) : $dafault-font-family
+
+$motto_font-size = convert(hexo-config('subtitle_social.subtitle.font-size'))
+$motto_color = convert(hexo-config('subtitle_social.subtitle.font-color'))
+
+$codecolor = convert(hexo-config('highlight.code_color'))
+$guttercolor = convert(hexo-config('highlight.gutter_color'))

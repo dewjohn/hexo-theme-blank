@@ -2,7 +2,7 @@
 <%
 page.title = __('error_title')
 %>
-
+<div class="post-wrap">
 <div class="container">
     <h2><%= theme.page_404.subtitle %></h2>
     <h1>404</h1>
@@ -11,9 +11,8 @@ page.title = __('error_title')
 <style>
 .container{
   width: 100%;
-  top: 50%;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 100px auto 0;
   transform: translateY(-50%);
   text-align: center;
   color: #343434
@@ -24,8 +23,5 @@ page.title = __('error_title')
   font-weight: 900;
   letter-spacing: 20px;
 }
-.container h2{
-    padding: 2em;
-}
 </style>
-
+</div>

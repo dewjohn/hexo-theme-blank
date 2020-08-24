@@ -1,0 +1,115 @@
+code {
+	word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+code {
+    color: var(--code);
+    background-color: var(--codebg);
+    padding: 0.25rem 0.5rem;
+    margin: 0;
+    font-size: 0.9em;
+    border-radius: 3px;
+	font-family: Consolas,"Panic Sans","DejaVu Sans Mono","Bitstream Vera Sans Mono",Menlo,"Microsoft Yahei"!important;
+}
+.highlight {
+    position: relative;
+    width: 100%;
+    margin: .5rem 0;
+    display: block;
+    background-color: $codecolor;
+    font-size: .9rem;
+    border-radius: 4px;
+    line-height: 1.5;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    overflow: hidden;
+    transition: all .28s ease;
+    -moz-transition: all .28s ease;
+    -webkit-transition: all .28s ease;
+    -o-transition: all .28s ease;
+}
+.highlight>table {
+    overflow: auto;
+    display: block;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+table {
+    border-collapse: collapse;
+    overflow: auto;
+    display: inline-block;
+    max-width: 100%;
+    margin-right: .5rem;
+    vertical-align: text-top;
+}
+.highlight>table pre {
+    background: 0 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.content pre {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    overflow: auto;
+    font-size: .9rem;
+    font-family: Consolas,"Panic Sans","DejaVu Sans Mono","Bitstream Vera Sans Mono",Menlo,"Microsoft Yahei"!important;
+    border: 1px solid $guttercolor;
+    padding: 16px;
+    border-radius: 4px;
+}
+.highlight>table .gutter {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    border-top-left-radius: calc(4px - 1px);
+    border-bottom-left-radius: calc(4px - 1px);
+    padding: 0 12px;
+    text-align: right;
+    border-width: 0;
+    margin-left: 0;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: $guttercolor;
+}
+
+.btn-copy {
+    z-index: 1;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 4px 8px;
+    color: rgba(68,68,68,.65);
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+    position: absolute;
+    top: 0; 
+    right: 0;
+    opacity: 0;
+    transition: all .28s ease;
+    -moz-transition: all .28s ease;
+    -webkit-transition: all .28s ease;
+    -o-transition: all .28s ease;
+}
+.btn-copy span {
+  margin-left: 5px;
+}
+.highlight:hover .btn-copy{
+  opacity: 1;
+}
+

@@ -1,0 +1,21 @@
+<% if (theme.valine && post.comments){ %>
+    <div id="valine"></div>
+    <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+    <script>
+          new Valine({
+            el: '#valine',
+            appId: "<%= theme.valine.appid %>",
+            appKey: "<%= theme.valine.appkey %>",
+            avatar: "<%= theme.valine.avatar %>",
+            lang: "<% theme.valine.lang %>",
+            meta: '<%= theme.valine.meta %>'.split(','),
+            requiredFields: '<%= theme.valine.requiredFields %>'.split(','),
+            placeholder: "<%= theme.valine.placeholder %>",
+            pageSize:'<%= theme.valine.pageSize %>',
+            recordIP: '<%= theme.valine.recordIP %>',
+            serverURLs: "<%= theme.valine.serverURLs %>",
+            emojiCDN: "<%= theme.valine.emojiCDN %>",
+            enableQQ: "<%= theme.valine.enableQQ %>",
+          });
+    </script>
+    <% } %>

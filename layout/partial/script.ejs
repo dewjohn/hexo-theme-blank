@@ -1,53 +1,56 @@
 
+<script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
 
-<script src="https://www.layuicdn.com/layui-v2.5.6/layui.js"></script>
 
 <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
   <% theme.scripts.forEach(url => { %>
-    <script src="<%= url_for(url) %>"></script>
+    <script src="<%- url_for(url) %>"></script>
   <% }); %>
 <% } %>
+ 
+<% if (config.search && theme.local_search.enable) { %>
+  <%- partial('partial/_search/local-searchjs', {cache: true}) %>
+  <% } %>
 
-<% if (theme.lazyload.enable) { %>
-  <script>
-      window.lazyLoadOptions = {
-        elements_selector: 'img',
-        threshold: 0
-      }
-  </script>
-  <script src="<%= theme.lazyload.script %>"></script>
-<% } %>
+<% if(theme.lazyload.enable){ %>
+  <%- partial('partial/_modify/lazyload', {cache: true}) %>   
+  <% } %>
 
 <% if(theme.fancybox.enable) { %>
-  <script>
-    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
-    images.each(function (i, o) {
-      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
-      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
-    })
-  </script>
-  <script src="<%= theme.fancybox.script %>"></script>
-  <script>
-        $().fancybox({
-      selector: '[data-fancybox]',
-      loop: true,
-      transitionEffect: 'slide',
-      protect: true,
-      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
-    })
-  </script>
+  <%- partial('partial/_modify/fancybox', {cache: true}) %>   
   <% } %>
 
 <% if(theme.mathjax.enable) { %>
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    };
-  </script>
-  <script src="<%= theme.mathjax.script %>"></script>
-<% } %>
+  <%- partial('partial/_maths/mathjax', {cache: true}) %>
+  <% } %>
+
+<% if(theme.mermaid.enable) { %>
+  <%- partial('partial/_maths/mermaid', {cache: true}) %>
+  <% } %>
+
+<% if(theme.reward.enable && is_post()) { %>
+  <%- partial('partial/_modify/rewards/rewardjs', {cache: true}) %>
+  <%} %>
+
+<% if(theme.audio.enable){ %>
+  <%- partial('partial/_modify/audio', {cache:true}) %>
+  <% } %>
+
+<% if(theme.copy.enable){ %>
+  <%- partial('partial/_modify/copy', {cache:true}) %>
+  <% } %>
+
+<% if(theme.instantpage.enable) { %>
+  <script src="<%= theme.instantpage.script %>" type="module" defer></script>
+  <% } %>
+
+<% if(theme.Click.firework){ %>
+  <script src="<%= theme.Click.firework_script %>"></script>
+  <% } %>
+
+<% if(theme.todark.enable){ %>
+  <script src="<%- url_for('/js/todark.js') %>"></script>
+  <% } %>
 
 <script>
   var btntop = $('#gotop');
@@ -55,79 +58,9 @@
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, '300');
   });
-</script>
 
-<% if(theme.mermaid.enable) { %>
-  <script src="<%= theme.mermaid.script %>"></script>
-  <script>mermaid.initialize({startOnLoad:true});</script>
-  <script>
-    $(document).ready(function () {
-      $('code.hljs').each(function (i, block) {
-        if ($.inArray(block.className, ['mermaid']) < 0) {
-          hljs.lineNumbersBlock(block);
-        }
-      });
-    });
-    </script>
-  <% } else { %>
-    <script>
-      $(document).ready(function () {
-        $('code.hljs').each(function (i, block) {
-          hljs.lineNumbersBlock(block);
-        });
-      });
-    </script>
-  <% } %>
-
-
-<% if(theme.reward.enable && is_post()) { %>
-<script>
-//reward
-jQuery(document).ready(function () {
-  var QRBox = $('#QRBox');
-  var MainBox = $('#MainBox');
-  var AliPayQR = '<%= theme.reward.AliPayQR %>';
-  var WeChanQR = '<%= theme.reward.WeChatQR %>';
-
-  function showQR(QR) {
-    if (QR) {
-      MainBox.css('background-image', 'url(' + QR + ')');
-    }
-    $('#donateBox').addClass('blur');
-    QRBox.fadeIn(300, function (argument) {
-      MainBox.addClass('showQR');
-    });
-  }
-
-  $('#donateBox>li').click(function (event) {
-    var thisID = $(this).attr('id');
-    if (thisID === 'AliPay') {
-      showQR(AliPayQR);
-    } else if (thisID === 'WeChat') {
-      showQR(WeChanQR);
-    }
-  });
-
-  MainBox.click(function (event) {
-    MainBox.removeClass('showQR').addClass('hideQR');
-    setTimeout(function (a) {
-      QRBox.fadeOut(300, function (argument) {
-        MainBox.removeClass('hideQR');
-      });
-      $('#DonateText,#donateBox,#github').removeClass('blur');
-    }, 600);
-
-  });
-});
-</script>
-<%} %>
-
-<script>
   var $table = $('.content table').not($('figure.highlight > table'))
-  $table.each(function () {
-    $(this).wrap('<div class="table-wrap"></div>')
-  })
+$table.each(function () {
+  $(this).wrap('<div class="table-wrap"></div>')
+})
 </script>
-
-
-

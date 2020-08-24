@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="<%= config.language %>">
 <head>
-  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- url_for(theme.favicon) %>">
@@ -24,7 +25,6 @@
 
   <%
   var title = page.title;
-
   if (is_archive()){
       title = __('archive');
 
@@ -42,17 +42,22 @@
 
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
 
-  <%- partial('partial/third-party/google-analytics') %>
-  <%- partial('partial/third-party/baidu-analytics') %>
+  <%- partial('partial/_third-party/google-analytics') %>
+  <%- partial('partial/_third-party/baidu-analytics') %>
   <% if (theme.baidu_push.enable){ %>
-      <%- partial('partial/third-party/baidu-push') %>
+      <%- partial('partial/_third-party/baidu-push') %>
   <% } %>
 
 
-  <% if (theme.googlefonts.link){ %>
+  <% if (theme.fonts.font_link){ %>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
-    <link rel="stylesheet" href="<%=theme.googlefonts.link%>"  media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="<%= theme.fonts.font_link %>"  media="print" onload="this.media='all'">
   <% } %>
+  
+  <% if(theme.title_font.font_link){ %>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
+    <link rel="stylesheet" href="<%= theme.title_font.font_link %>"  media="print" onload="this.media='all'">
+    <% } %>
 
   <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
     <% theme.stylesheets.forEach(url => { %>
@@ -60,9 +65,8 @@
     <% }); %>
   <% } %>
 
-  <% if(theme.highlight.enable) { %>
+  <% if(theme.highlight.enable && theme.highlight.method == 2) { %>
     <link rel="stylesheet" href="<%= theme.highlight.style %>">
     <% } %>
-
 </head>
 </html>

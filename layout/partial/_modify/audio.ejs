@@ -1,0 +1,50 @@
+<% if(theme.audio.enable) { %>
+<div id="QPlayer">
+	<div id="pContent">
+		<div id="player">
+			<span class="cover"></span>
+			<div class="ctrl">
+				<div class="musicTag marquee">
+					<strong>Title</strong>
+					 <span> - </span>
+					<span class="artist">Artist</span>
+				</div>
+				<div class="progress">
+					<div class="timer left">0:00</div>
+					<div class="contr">
+						<div class="rewind icon"></div>
+						<div class="playback icon"></div>
+						<div class="fastforward icon"></div>
+					</div>
+					<div class="right">
+						<div class="liebiao icon"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ssBtn">
+				<div class="adf"><i class="fas fa-music" style="color: #Fff;"></i></div>
+		</div>
+	</div>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/audio.css">
+	<ol id="playlist"></ol>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js"></script>
+<script>
+	var playlist = [];
+	<% for (var i in site.data.audio) { %>
+		  playlist.push({title:'<%= site.data.audio[i].title %>',artist:'<%= site.data.audio[i].artist %>',mp3:'<%= site.data.audio[i].mp3 %>',cover:'<%= site.data.audio[i].cover %>'})
+	  <% } %>
+	var isRotate = true;
+	var autoplay = false;
+  </script>
+<script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/player.js"></script>
+<script>
+  function bgChange(){
+	var lis= $('.lib');
+	for(var i=0; i<lis.length; i+=2)
+	lis[i].style.background = 'rgba(246, 246, 246, 0.5)';
+  }
+  window.onload = bgChange;
+</script>
+<% } %>

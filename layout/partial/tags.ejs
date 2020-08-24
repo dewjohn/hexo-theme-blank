@@ -1,4 +1,11 @@
 
 <div class="tags-cloud">		
-    <%- tagcloud({min_font: 20, max_font: 32, amount: 200}) %>
+  <%- tagcloud({amount: 200}) %>
   </div>
+  <script type="text/javascript">
+    var list = document.querySelectorAll('.tags-cloud a');
+    Array.prototype.forEach.call(list, (item, index) => {
+      item.style.fontSize = Math.floor(Math.random() * 29 + 12) + 'px';//12 ~ 40
+      item.style.color = 'rgb(' + Math.floor(Math.random() * 201) + ', ' + Math.floor(Math.random() * 201) + ', ' + Math.floor(Math.random() * 201) + ')';// 0,0,0 -> 200,200,200
+    });
+  </script>

@@ -10,7 +10,7 @@ a simple hexo theme
 
 # Screenshots
 
-![](https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/images/2020/07/31/f8d940f84782513a021772cfda4d11c9.png)
+![](https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/images/2020/08/24/99f2830658e85d00411a7d4701f832fb.png)
 
 
 

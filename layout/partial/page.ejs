@@ -1,26 +1,21 @@
-<div class="pagetitle">
-    <h1><%=page.title%></h1>
-</div>
-<div class="indexpage">
-    <article class="post-wrap page">
-        <% if(theme.page_title_enable){ %>
-        <h2 class="post-title"><%- page.title %></h2>
-        <% } %>
-        <section class="content">
-            <% if (page.archive || page.type === "archive") { %>
-                <%- partial('partial/archive') %>
-            <% } else if (page.type === "tags") { %>
-                <%- partial('partial/tags') %>
-            <% } else if (page.type === 'categories') { %>
-                <%- partial('partial/categories') %>
-            <% } else if (page.type === 'link') { %>
-                <%- partial('partial/link') %>
-            <% } else { %>
-                    <%- page.content %>
-            <% } %>
-        </section>
-    </article>
-    <%- partial('partial/comments') %>
-</div>
 
+<article class="post-wrap page">
+    <h1 class="pagetitle"><%=page.title%></h1>
+    <section class="content">
+        <% if (page.archive || page.type === "archive") { %>
+            <%- partial('partial/archive') %>
+        <% } else if (page.type === "tags") { %>
+            <%- partial('partial/tags') %>
+        <% } else if (page.type === 'categories') { %>
+            <%- partial('partial/categories') %>
+        <% } else if (page.type === 'link') { %>
+            <%- partial('partial/link') %>
+        <% } else if (page.type === 'search') { %>
+            <%- partial('partial/_search/local-search') %>
+        <% } else { %>
+                <%- page.content %>
+        <% } %>
+     </section>
+        <%- partial('partial/_comment/valine', {cache:true}) %>
+</article>
 

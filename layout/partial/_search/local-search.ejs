@@ -1,0 +1,9 @@
+<% if(theme.local_search.enable){ %>
+<div id="site_search">
+    <div class="form-group">
+     <input type="text" id="local-search-input" name="q" results="0" placeholder="<%= __('search') %>" class="st-search-input st-default-search-input form-control"/>
+     <button class="search-btn btn"><i class="fas fa-search-plus" style="font-size: 16px;"></i></button>
+    </div>  
+   <div id="local-search-result"></div>
+   </div>
+<% } %>

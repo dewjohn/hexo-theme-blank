@@ -2,31 +2,25 @@
 <div class="nav index" style="height: 60px;">
     <div class="title animated fadeInDown">
         <div class="layui-container">
-            <% if(theme.logo.method == 2){ %>
                 <div class="nav-title"><a href="<%- url_for() %>" title="<%= config.title %>"><%= config.title %></a></div>
-               <% } %>
             <div class="nav-list">
                 <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
                 <ul class="layui-nav" lay-filter="">
-                    <% for (var name in theme.menu){ %>
+                    <% for (var i in theme.menu){ %>
+                        <% var arr = theme.menu[i].split('||') %>
+                        <% var url = arr[0] %>
+                        <% var icon = arr[1] %>
+                        <% var color = arr[2] %>
                     <li class="layui-nav-item">
-                        <a href="<%- url_for(theme.menu[name].path) %>">
-                            <i class="<%= theme.menu[name].fa %>"></i>
-                            <span class="layui-nav-item-name"><%- __(name) %></span>
+                        <a href="<%- url %>">
+                            <i class="<%- icon %>" style="color:<%- color %>;"></i>
+                            <span class="layui-nav-item-name"><%- __(i) %></span>
                         </a>
                     </li>
                     <% } %>
-                    <li class="layui-nav-item">
-                        <% if (theme.todark.enable){ %>
-                        <div id="dark" onclick="switchDarkMode()"></div>
-                        <script>
-                            if (localStorage.getItem('dark') === '1') {
-                                document.body.classList.add('dark');
-                            }
-                            document.getElementById('dark').innerHTML = document.querySelector("body").classList.contains("dark") ? "🌙" : "🌞";
-                        </script>
+                    <% if (theme.todark.enable){ %>
+                        <li class="layui-nav-item" id="btn-toggle-dark">🌙</li>
                         <% } %>
-                    </li>
                     <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
                 </ul>
             </div>

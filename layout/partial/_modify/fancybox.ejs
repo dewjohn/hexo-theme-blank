@@ -1,0 +1,17 @@
+<script>
+    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
+    images.each(function (i, o) {
+      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
+      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
+    })
+  </script>
+  <script src="<%= theme.fancybox.script %>"></script>
+  <script>
+        $().fancybox({
+      selector: '[data-fancybox]',
+      loop: true,
+      transitionEffect: 'slide',
+      protect: true,
+      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
+    })
+  </script>

@@ -3,37 +3,48 @@
 language: zh-CN
 
 # 设置 favicon
-favicon: /img/favicon.ico
+favicon: /img/favicon.png
 
 
 # 设置 rss
 rss: /atom.xml
 
 
+# 左上角/中间的网站名字
+title_font:
+  font_link: 
+  font-family: 
+
+
+# 全局字体
+fonts:
+  font_link:
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+
 # 顶部菜单  
 # 如果不需要显示某项,可以用'#'注释掉
 menu:
-  home: { path: /, fa: fab fa-fort-awesome}
-  archive: { path: /archives/, fa: fas fa-archive}
-  tag: { path: /tags/, fa: fas fa-hashtag}
-  categories: { path: /categories/, fa: far fa-folder-open}
-  about: { path: /about/, fa: fab fa-grav}
-  guestbook: { path: /guestbook/, fa: fab fa-telegram}
-  friends: { path: /link/, fa: fab fa-weixin}
-  说说: {path: /shuoshuo/, fa: fas fa-coffee}
+  search: /search/ || fas fa-search-plus || rgb(3 169 244)
+  home: / || fab fa-fort-awesome || rgb(255 107 107)
+  archive: /archives/ || fas fa-archive || rgb(10 189 227)
+  tag: /tags/ || fas fa-hashtag || rgb(254 202 87)
+  categories: /categories || far fa-folder-open || rgb(29 209 161)
+  about: /about/ || fab fa-grav || rgb(154 106 247)
+  guestbook: /guestbook/ || fab fa-telegram || hsl(205deg 100% 50%)
+  friends: /link/ || fab fa-weixin || hsl(152deg 73% 45%)
+  说说: /shuoshuo/ || fas fa-coffee ||#31c7c1
 
 
-# 首页
-# method: 1显示Title
-# method: 2显示Avatar
+
+# 如果 method: 1显示名称；method: 2显示头像
 logo:
   method: 2
   avatar: https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/images/2020/07/27/baokemeng.webp
 
 
-# method: 1,只显示座右铭
-# method: 2,则同时显示座右铭和社交图标
-# method: 3,只显示社交图标
+
+# 如果 method: 1只显示座右铭；method: 2则同时显示座右铭和社交图标；method: 3只显示社交图标
 subtitle_social: 
   method: 3
   subtitle:
@@ -42,19 +53,36 @@ subtitle_social:
     font-color: "#84ccc9"
 
   social:
-  Github:
-    icon: fab fa-github
-    url: https://github.com/a2396837
-  Email:
-    icon: fa fa-envelope
-    url: mailto:894049579@qq.com
+    Github:
+      icon: iconfont icon-GitHub
+      url: https://github.com/a2396837
+    Email:
+      icon: iconfont icon-email
+      url: mailto:894049579@qq.com
+    Steam:
+      icon: iconfont icon-steam
+      url: https://steamcommunity.com/id/a2396837
+    Bilibili:
+      icon: iconfont icon-bilibili
+      url: https://space.bilibili.com/8823569
+    Netmusic:
+      icon: iconfont icon-wangyiyunyinle1
+      url: https://music.163.com/#/user/home?id=262078590
 
 
+# 全局音乐播放器
+audio:
+  enable: false
 
 
 # 是否打开暗黑模式
 todark:
-  enable: true          # 是否打开暗黑模式
+  enable: true       
+
+
+# 本地搜索
+local_search:
+  enable: true
 
 
 # 文章的相关信息
@@ -79,7 +107,7 @@ toc:
 # 文章自动摘要
 auto_excerpt:
   enable: true
-  length: 350
+  length: 250
 
 
 # Lazyload (图片懒加载)
@@ -88,6 +116,15 @@ lazyload:
   enable: true
   image: /img/loading.gif
   script: https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js
+
+
+
+# https://instant.page/
+# prefetch (预加载)
+instantpage:
+  enable: true
+  script: https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js
+
 
 
 # fancybox
@@ -104,6 +141,11 @@ baidu_push:
 google_analytics:
 # 百度分析
 baidu_analytics: 
+
+
+# 代码复制功能
+copy:
+  enable: true
 
 
 # Post copyright
@@ -128,6 +170,7 @@ reward:
   PayPalLink: https://paypal.me                            # paypal收款链接
 
 
+
 # 一个内置的简单404页面
 page_404:
   enable: true
@@ -142,29 +185,35 @@ ICP:
 #  icon: /img/icp.png
 
 
-# 全局字体可使用谷歌字体替换
-googlefonts:
-  font-family:
-  link:
-
 
 # highlight
 highlight:
-  enable: true
+  method: 1
+  code_color: "#fafafa"     # 代码块颜色
+  gutter_color: "#f2f2f2"   # 代码行号块颜色
   style: https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/github.css
-#   https://www.jsdelivr.com/package/npm/highlight.js?path=styles 找到你喜欢的代码高亮主题并替换上面
+
 
 
 # mermaid
 mermaid:
   enable: true
-  script: https://cdn.jsdelivr.net/npm/mermaid@8.6.3/dist/mermaid.min.js
+  theme: default
+  script: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+
 
 
 # MathJax
 mathjax:
-  enable: false
+  enable: true
   script: https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js
+
+
+
+# 鼠标点击特效(未来会增加更多种样式)
+Click:
+  firework: true
+  firework_script: https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js
 
 
 # Valine 评论系统  https://valine.js.org
@@ -172,17 +221,16 @@ valine:
   enable: true # 如果使用valine，请设置改之为true
   appid: # leancloud application app id
   appkey: # leancloud application app key
-  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
-  verify: false # Verification code
-  placeholder: Just go go # comment box placeholder
+  placeholder: 评论记得带上邮箱,你的留言我会马上收到邮箱提醒哒
   avatar: mm # gravatar style
-  guest_info: nick,mail,link # custom comment header
+  lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
+  meta: nick,mail,link
+  requiredFields: nick,mail # required fields (nick/mail)
   pageSize: 10 # pagination size
   recordIP: false # 是否记录评论者IP
   serverURLs:
-  emojiCDN: # emoji CDN
+  emojiCDN: 
   enableQQ: true
-
 
 
 # stylesheets loaded in the <head>
@@ -191,14 +239,14 @@ stylesheets:
 - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
 #- https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
 - https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css
-
+- https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/socialiconfont.css   # 社交图标的css
 
 # scripts loaded in the end of the body
 scripts:
 - /js/script.js
 - https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
-- https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js
-- https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.7.0/dist/highlightjs-line-numbers.min.js
+
+
 
 
 

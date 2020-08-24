@@ -2,7 +2,7 @@
 <article id="post">
   <div class="post-title"><%= post.title || '(no title)' %></div>
   <%- partial('partial/post-meta', {cache:true}) %>
-  <% if(theme.toc.enable && post.toc !== false) {%>
+  <% if(theme.toc.enable && post.toc == true) {%>
     <div id="toc" class="toc">
           <h1><%= __('Toc') %></h1>
           <%- toc(post.content, {list_number: true}) %>
@@ -27,10 +27,10 @@
 <% if(theme.sharejs.enable || theme.reward.enable){%>
   <div class="share-reward">
     <div class="share">
-        <%-partial('partial/third-party/sharejs', {cache:true}) %>
+        <%-partial('partial/_modify/sharejs', {cache:true}) %>
       </div>
         <div class="reward">
-          <%-partial('partial/third-party/reward', {cache:true}) %>
+          <%-partial('partial/_modify/rewards/reward', {cache:true}) %>
         </div>
     </div>
     <% } %>
@@ -51,9 +51,5 @@
         </div>
       <% } %>
     </div>
-
-
-    <div class="comments">
-      <%- partial('partial/comments') %>
-    </div>
+      <%- partial('partial/_comment/valine', {cache:true}) %>
 </article>
