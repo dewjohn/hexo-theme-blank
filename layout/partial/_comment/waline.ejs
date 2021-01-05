@@ -1,0 +1,13 @@
+<% if (theme.waline.enable && post.comments){ %>
+    <script src='//unpkg.com/@waline/client/dist/Waline.min.js'></script>
+    <div id="waline"></div>
+    <script>
+    new Waline({
+        el: '#waline',
+        path: location.pathname,
+        serverURL: "<%= theme.waline.serverURL %>",
+        avatar: "<%= theme.waline.avatar %>",
+        placeholder: "<%= theme.waline.placeholder %>"
+    });
+    </script>
+<% } %>

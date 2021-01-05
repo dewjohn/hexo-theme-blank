@@ -48,6 +48,8 @@
       <%- partial('partial/_third-party/baidu-push') %>
   <% } %>
 
+  <link rel="stylesheet" href="<%= url_for('css/style.css') %>" >
+  <link rel="stylesheet" href="<%= url_for('/css/partial/dark.css') %>" >
 
   <% if (theme.fonts.font_link){ %>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
@@ -65,5 +67,8 @@
     <% }); %>
   <% } %>
 
+  <% if(theme.todark.enable){ %>
+    <script src="<%- url_for('/js/todark.js') %>"></script>
+    <% } %>
 </head>
 </html>

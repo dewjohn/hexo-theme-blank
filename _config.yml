@@ -68,6 +68,9 @@ subtitle_social:
     Netmusic:
       icon: iconfont icon-wangyiyunyinle1
       url: https://music.163.com/#/user/home?id=262078590
+    rss:
+      icon: iconfont icon-rss
+      url: /atom.xml
 
 
 # 全局音乐播放器
@@ -188,16 +191,14 @@ ICP:
 
 # highlight
 highlight:
-  method: 1
   code_color: "#fafafa"     # 代码块颜色
   gutter_color: "#f2f2f2"   # 代码行号块颜色
-  style: https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/github.css
 
 
 
 # mermaid
 mermaid:
-  enable: true
+  enable: false
   theme: default
   script: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
 
@@ -205,17 +206,17 @@ mermaid:
 
 # MathJax
 mathjax:
-  enable: true
+  enable: false
   script: https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js
-
 
 
 # 鼠标点击特效(未来会增加更多种样式)
 Click:
-  firework: true
+  firework: false
   firework_script: https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js
 
 
+##评论系统，当您打开一个评论系统，其他评论系统必须关掉:enable: flase
 # Valine 评论系统  https://valine.js.org
 valine:
   enable: true # 如果使用valine，请设置改之为true
@@ -232,14 +233,24 @@ valine:
   emojiCDN: 
   enableQQ: true
 
+# OR
+
+#Waline 评论系统 https://waline.js.org
+waline:
+  enable: false
+  serverURL: 
+  avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
+  placeholder: Just go go # comment box placeholder
+  
+
 
 # stylesheets loaded in the <head>
 stylesheets:
-- /css/style.css
+- /css/partial/highlight/atom-one-light.css
 - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
 #- https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
 - https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css
-- https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/socialiconfont.css   # 社交图标的css
+- https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css
 
 # scripts loaded in the end of the body
 scripts:

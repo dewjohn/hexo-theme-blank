@@ -36,10 +36,6 @@
   <%- partial('partial/_modify/audio', {cache:true}) %>
   <% } %>
 
-<% if(theme.copy.enable){ %>
-  <%- partial('partial/_modify/copy', {cache:true}) %>
-  <% } %>
-
 <% if(theme.instantpage.enable) { %>
   <script src="<%= theme.instantpage.script %>" type="module" defer></script>
   <% } %>
@@ -48,8 +44,8 @@
   <script src="<%= theme.Click.firework_script %>"></script>
   <% } %>
 
-<% if(theme.todark.enable){ %>
-  <script src="<%- url_for('/js/todark.js') %>"></script>
+<% if(theme.copy.enable){ %>
+  <%- partial('partial/_modify/copy', {cache:true}) %>  
   <% } %>
 
 <script>

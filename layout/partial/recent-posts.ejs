@@ -49,7 +49,7 @@
                   <%- post.content %>
              <% } %>
           </div>
-      </div>
+        </div>
       <div class="post-footer">
         <% if(post.excerpt || post.descripttion || (theme.auto_excerpt.enable && post.auto_excerpt)) { %>
         <div class="readmore"><a href="<%=url_for(post.path)%>"><%= __('Read More') %> »</a></div>   
