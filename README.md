@@ -3,9 +3,7 @@ a simple hexo theme
 
 # Demo
 
-<a href="https://dmx.pub/">Demosite</a>
-<br>
-<a href="https://mirror.dmx.pub/">Mirrorsite</a>
+<a href="https://hexo-blank.vercel.app/">https://hexo-blank.vercel.app/</a>
 
 
 # Screenshots
